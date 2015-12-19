@@ -1,0 +1,2702 @@
+[
+  {
+    "Incident Date":"December 13, 2015",
+    "State":"California",
+    "City or County":"Los Angeles",
+    "Address":"5550 S. Flower Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"December 13, 2015",
+    "State":"California",
+    "City or County":"Huntington Beach",
+    "Address":"17000 block of Keelson Lane",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"December 12, 2015",
+    "State":"Georgia",
+    "City or County":"Savannah",
+    "Address":"Whitaker Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"December 11, 2015",
+    "State":"Maryland",
+    "City or County":"Baltimore",
+    "Address":"5100 block of Park Heights Avenue",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"December 11, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Pittsburgh (Mount Oliver)",
+    "Address":"200 Block of  Brownsville Road",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"December 8, 2015",
+    "State":"Ohio",
+    "City or County":"Cincinnati (Fairmount)",
+    "Address":"2300 block of Baltimore Avenue",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"December 6, 2015",
+    "State":"Nebraska",
+    "City or County":"Omaha",
+    "Address":"North 108th Street and Military Road",
+    "Killed":"2",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"December 6, 2015",
+    "State":"Louisiana",
+    "City or County":"Raceland",
+    "Address":"Market Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"December 2, 2015",
+    "State":"Georgia",
+    "City or County":"Savannah",
+    "Address":"100 block of West 33rd Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"December 2, 2015",
+    "State":"California",
+    "City or County":"San Bernardino",
+    "Address":"1365 South Waterman Avenue",
+    "Killed":"16",
+    "Injured":"21",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 29, 2015",
+    "State":"Illinois",
+    "City or County":"Kankakee",
+    "Address":"600 block of E. Court St",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 27, 2015",
+    "State":"Colorado",
+    "City or County":"Colorado Springs",
+    "Address":"3480 Centennial Blvd",
+    "Killed":"3",
+    "Injured":"9",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 24, 2015",
+    "State":"South Carolina",
+    "City or County":"Horry (county)",
+    "Address":"Colletta Court",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 23, 2015",
+    "State":"Minnesota",
+    "City or County":"Minneapolis",
+    "Address":"Morgan Avenue North",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 23, 2015",
+    "State":"Ohio",
+    "City or County":"Columbus",
+    "Address":"90 block of S. Terrace Avenue",
+    "Killed":"4",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 22, 2015",
+    "State":"Texas",
+    "City or County":"Brownsville",
+    "Address":"1800 Block of FM 802",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 22, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"4100 block of West Roosevelt",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 22, 2015",
+    "State":"Washington",
+    "City or County":"Seattle",
+    "Address":"Broadway and Pike",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 22, 2015",
+    "State":"New York",
+    "City or County":"Newburgh",
+    "Address":"203 Broadway",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 22, 2015",
+    "State":"South Carolina",
+    "City or County":"North Charleston",
+    "Address":"Park Circle",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 22, 2015",
+    "State":"Louisiana",
+    "City or County":"New Orleans",
+    "Address":"1900 block of Gallier Street",
+    "Killed":"0",
+    "Injured":"17",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 21, 2015",
+    "State":"Maryland",
+    "City or County":"Baltimore",
+    "Address":"Stricker and School",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 20, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Pittsburgh",
+    "Address":"Prospect Drive",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 18, 2015",
+    "State":"California",
+    "City or County":"Fresno",
+    "Address":"California Avenue and Martin Luther King Jr. Boulevard",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 16, 2015",
+    "State":"Alabama",
+    "City or County":"Cherokee (county)",
+    "Address":"1400 block of County Road 664",
+    "Killed":"3",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 15, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Philadelphia",
+    "Address":"5600 block of Blakemore Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 15, 2015",
+    "State":"Texas",
+    "City or County":"Tennessee Colony",
+    "Address":"800 Block of County Road 2217",
+    "Killed":"5",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 14, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Johnstown",
+    "Address":"1159 Main St",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 13, 2015",
+    "State":"Florida",
+    "City or County":"Jacksonville",
+    "Address":"1300 block of South Shirley Oaks Drive",
+    "Killed":"4",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 9, 2015",
+    "State":"Indiana",
+    "City or County":"Indianapolis",
+    "Address":"400 block of North Beville Ave",
+    "Killed":"2",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 8, 2015",
+    "State":"Iowa",
+    "City or County":"Des Moines",
+    "Address":"4397 NW 6th Drive",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 8, 2015",
+    "State":"Michigan",
+    "City or County":"Warren",
+    "Address":"13859 8 Mile Road",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 7, 2015",
+    "State":"Colorado",
+    "City or County":"Denver",
+    "Address":"Bayaud and Bannock",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 6, 2015",
+    "State":"California",
+    "City or County":"Bakersfield",
+    "Address":"1000 block of Feliz Drive",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 3, 2015",
+    "State":"Florida",
+    "City or County":"Jacksonville",
+    "Address":"Ella Street and Kings Road",
+    "Killed":"2",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"November 2, 2015",
+    "State":"South Carolina",
+    "City or County":"Pendleton",
+    "Address":"2217 Refuge Road",
+    "Killed":"4",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 28, 2015",
+    "State":"Louisiana",
+    "City or County":"Houma",
+    "Address":"400 Block of Morgan Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 26, 2015",
+    "State":"Indiana",
+    "City or County":"Evansville",
+    "Address":"711 E Virginia St",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 25, 2015",
+    "State":"District of Columbia",
+    "City or County":"Washington",
+    "Address":"4300 block of Wheeler Road SE",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 25, 2015",
+    "State":"Arizona",
+    "City or County":"Phoenix",
+    "Address":"Seventh Street and Broadway",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 25, 2015",
+    "State":"North Carolina",
+    "City or County":"Four Oaks",
+    "Address":"2339 Stricklands Crossroads Road",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 24, 2015",
+    "State":"South Carolina",
+    "City or County":"Bamberg",
+    "Address":"682 Dixie Ave.",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 22, 2015",
+    "State":"Tennessee",
+    "City or County":"Nashville",
+    "Address":"3500 John A. Merritt Boulevard",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 19, 2015",
+    "State":"Illinois",
+    "City or County":"Calumet City",
+    "Address":"300 Campbell Avenue",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 18, 2015",
+    "State":"Louisiana",
+    "City or County":"New Orleans",
+    "Address":"Florida Avenue and Choctaw Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 17, 2015",
+    "State":"Indiana",
+    "City or County":"Elkhart",
+    "Address":"130 Easy Shopping Place",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 17, 2015",
+    "State":"Florida",
+    "City or County":"Fort Myers",
+    "Address":"2224 First St",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 12, 2015",
+    "State":"Georgia",
+    "City or County":"Decatur",
+    "Address":"4731 Glenwood Road",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 10, 2015",
+    "State":"Illinois",
+    "City or County":"Peoria",
+    "Address":"2400 block of North Flora",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 10, 2015",
+    "State":"North Carolina",
+    "City or County":"Charlotte",
+    "Address":"West Boulevard and Remount Road",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 10, 2015",
+    "State":"Tennessee",
+    "City or County":"Memphis",
+    "Address":"6100 block of Mount Moriah Road",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 9, 2015",
+    "State":"Arizona",
+    "City or County":"Flagstaff",
+    "Address":"216 E Mountain View Drive",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 6, 2015",
+    "State":"Maryland",
+    "City or County":"Baltimore",
+    "Address":"300 block of North Payson Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 2, 2015",
+    "State":"Maryland",
+    "City or County":"Baltimore",
+    "Address":"5500 Reisterstown Road",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"October 1, 2015",
+    "State":"Oregon",
+    "City or County":"Roseburg",
+    "Address":"1140 Umpqua College Rd",
+    "Killed":"10",
+    "Injured":"9",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 28, 2015",
+    "State":"Ohio",
+    "City or County":"Dayton",
+    "Address":"1921 block of Oakridge",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 28, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"5300 block of South Aberdeen Street",
+    "Killed":"2",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 28, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"300 block of West 42nd Street",
+    "Killed":"3",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 28, 2015",
+    "State":"Ohio",
+    "City or County":"Cincinnati (Evanston)",
+    "Address":"1800 block of Hewitt Avenue",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 27, 2015",
+    "State":"Missouri",
+    "City or County":"Kansas City",
+    "Address":"1700 E. 18th St.",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 27, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"5200 block of South Justine",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 27, 2015",
+    "State":"Georgia",
+    "City or County":"Greenville",
+    "Address":"1140 Hill Haven Road",
+    "Killed":"0",
+    "Injured":"10",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 25, 2015",
+    "State":"Illinois",
+    "City or County":"Danville",
+    "Address":"1300 block of May Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 24, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"5100 block of South Morgan Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 23, 2015",
+    "State":"Georgia",
+    "City or County":"Norcross",
+    "Address":"Reddington Lane",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 23, 2015",
+    "State":"Louisiana",
+    "City or County":"Shreveport",
+    "Address":"2900 Block of Peach Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 23, 2015",
+    "State":"Florida",
+    "City or County":"Fort Myers",
+    "Address":"Dale Street and Veronica S. Shoemaker Boulevard",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 20, 2015",
+    "State":"Oklahoma",
+    "City or County":"Tulsa",
+    "Address":"Pine and Yale",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 20, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"5700 block of South LaSalle",
+    "Killed":"1",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 20, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Philadelphia",
+    "Address":"900 block of Pratt Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 19, 2015",
+    "State":"Indiana",
+    "City or County":"Indianapolis",
+    "Address":"3900 block of Graceland Avenue",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 17, 2015",
+    "State":"Michigan",
+    "City or County":"Albion",
+    "Address":"500 block of W. Broadwell Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 17, 2015",
+    "State":"South Dakota",
+    "City or County":"Platte",
+    "Address":"36705 379th Street",
+    "Killed":"6",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 15, 2015",
+    "State":"New Jersey",
+    "City or County":"Newark",
+    "Address":"Irvine Turner Boulevard and West Kinney Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 13, 2015",
+    "State":"Florida",
+    "City or County":"Ocala",
+    "Address":"1910 South Pine Avenue",
+    "Killed":"1",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 12, 2015",
+    "State":"Minnesota",
+    "City or County":"Minneapolis",
+    "Address":"1200 block of 22nd Ave. N.",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 12, 2015",
+    "State":"Minnesota",
+    "City or County":"Minneapolis",
+    "Address":"1st Ave. and N. 5th St.",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 12, 2015",
+    "State":"New York",
+    "City or County":"Rochester",
+    "Address":"36 Woodward Street",
+    "Killed":"2",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 12, 2015",
+    "State":"Louisiana",
+    "City or County":"Shreveport",
+    "Address":"1500 block of Clanton Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 11, 2015",
+    "State":"North Carolina",
+    "City or County":"Charlotte",
+    "Address":"1000 North Carolina Music Factory Blvd.",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 10, 2015",
+    "State":"Minnesota",
+    "City or County":"Clearbrook (Greenwood)",
+    "Address":"Channel Drive",
+    "Killed":"5",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 8, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"56th and Green",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 8, 2015",
+    "State":"Georgia",
+    "City or County":"Berlin",
+    "Address":"N/A",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 7, 2015",
+    "State":"Indiana",
+    "City or County":"Gary",
+    "Address":"9300 block of Sunrise",
+    "Killed":"2",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 7, 2015",
+    "State":"Colorado",
+    "City or County":"Denver",
+    "Address":"19th and Blake",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 5, 2015",
+    "State":"Missouri",
+    "City or County":"Columbia",
+    "Address":"1509 Ashley Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 5, 2015",
+    "State":"Nevada",
+    "City or County":"Las Vegas",
+    "Address":"5000 Block of Hollywood Boulevard",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 5, 2015",
+    "State":"Florida",
+    "City or County":"Daytona Beach",
+    "Address":"300 block of Pearl Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"September 5, 2015",
+    "State":"North Carolina",
+    "City or County":"Charlotte",
+    "Address":"Fieldvale Dr.",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 30, 2015",
+    "State":"Michigan",
+    "City or County":"Muskegon (Muskegon Heights)",
+    "Address":"600 block of East Hovey Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 30, 2015",
+    "State":"Tennessee",
+    "City or County":"Memphis",
+    "Address":"3300 block of Sobota Circle",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 29, 2015",
+    "State":"Tennessee",
+    "City or County":"Bristol",
+    "Address":"618 Henson Road",
+    "Killed":"3",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 29, 2015",
+    "State":"Texas",
+    "City or County":"Tyler",
+    "Address":"638 ENE Loop 323",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 28, 2015",
+    "State":"New York",
+    "City or County":"Brooklyn",
+    "Address":"589 Flatbush Avenue",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 27, 2015",
+    "State":"California",
+    "City or County":"Salinas",
+    "Address":"Blanco Circle",
+    "Killed":"2",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 26, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"3000 block of West Van Buren",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 26, 2015",
+    "State":"Florida",
+    "City or County":"West Palm Beach",
+    "Address":"800 block of 19th Street",
+    "Killed":"2",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 26, 2015",
+    "State":"Minnesota",
+    "City or County":"Minneapolis (Brooklyn Center)",
+    "Address":"5000 block of Drew Avenue North",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 25, 2015",
+    "State":"Louisiana",
+    "City or County":"New Orleans",
+    "Address":"Fern Street and Olive Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 23, 2015",
+    "State":"California",
+    "City or County":"Modesto",
+    "Address":"1100 block of Kansas Avenue",
+    "Killed":"1",
+    "Injured":"7",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 22, 2015",
+    "State":"New Mexico",
+    "City or County":"Roswell",
+    "Address":"300 block of East Reed Street",
+    "Killed":"3",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 22, 2015",
+    "State":"Florida",
+    "City or County":"Orlando (Pine Hills)",
+    "Address":"State Road 408",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 21, 2015",
+    "State":"Ohio",
+    "City or County":"Cincinnati",
+    "Address":"Mathis and Prentice",
+    "Killed":"2",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 21, 2015",
+    "State":"North Carolina",
+    "City or County":"Durham",
+    "Address":"2700 block of Hinson Drive",
+    "Killed":"0",
+    "Injured":"8",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 20, 2015",
+    "State":"Texas",
+    "City or County":"Grulla (La Grulla)",
+    "Address":"FM 2360",
+    "Killed":"2",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 19, 2015",
+    "State":"New York",
+    "City or County":"Rochester",
+    "Address":"500 Genesee Street",
+    "Killed":"3",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 16, 2015",
+    "State":"South Carolina",
+    "City or County":"Bennettsville",
+    "Address":"Highway 38N",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 16, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"5400 block of West Division Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 16, 2015",
+    "State":"Texas",
+    "City or County":"Fort Worth",
+    "Address":"3651 Sycamore School Rd",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 15, 2015",
+    "State":"South Carolina",
+    "City or County":"Orangeburg",
+    "Address":"2868 Bamberg Road",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 15, 2015",
+    "State":"California",
+    "City or County":"Los Angeles",
+    "Address":"57th Street and South Normandie Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 15, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Pittsburgh",
+    "Address":"West Prospect Avenue",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 10, 2015",
+    "State":"California",
+    "City or County":"Long Beach",
+    "Address":"1700 block of East 10th Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 9, 2015",
+    "State":"Missouri",
+    "City or County":"Kansas City",
+    "Address":"40th Street and Pennsylvania Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 9, 2015",
+    "State":"Michigan",
+    "City or County":"Detroit",
+    "Address":"15200 block of Hazelridge",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 9, 2015",
+    "State":"Mississippi",
+    "City or County":"Forest",
+    "Address":"Poplar Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 8, 2015",
+    "State":"Arkansas",
+    "City or County":"Blytheville",
+    "Address":"833 Anderson Street",
+    "Killed":"1",
+    "Injured":"11",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 8, 2015",
+    "State":"Texas",
+    "City or County":"Houston",
+    "Address":"2211 Falling Oaks",
+    "Killed":"8",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 8, 2015",
+    "State":"North Carolina",
+    "City or County":"Gastonia",
+    "Address":"Merrywood Lane and Greenwood Drive",
+    "Killed":"2",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 7, 2015",
+    "State":"Vermont",
+    "City or County":"Barre (Berlin)",
+    "Address":"3182 Airport Road",
+    "Killed":"4",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 6, 2015",
+    "State":"South Carolina",
+    "City or County":"Columbia",
+    "Address":"1505 Garden Plaza",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 4, 2015",
+    "State":"Missouri",
+    "City or County":"Saint Louis",
+    "Address":"2500 block of Semple",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 3, 2015",
+    "State":"New York",
+    "City or County":"Brooklyn",
+    "Address":"98 Dwight Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 2, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"4800 block of West Kamerling Avenue",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 2, 2015",
+    "State":"Maryland",
+    "City or County":"Baltimore",
+    "Address":"2700 block of Garrison Avenue",
+    "Killed":"0",
+    "Injured":"7",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 2, 2015",
+    "State":"New York",
+    "City or County":"Brooklyn",
+    "Address":"Stanley Avenue and Crescent Street",
+    "Killed":"0",
+    "Injured":"9",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 2, 2015",
+    "State":"Georgia",
+    "City or County":"Savannah",
+    "Address":"Barnard Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 2, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"6700 block of South Winchester Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"August 1, 2015",
+    "State":"Florida",
+    "City or County":"Orlando",
+    "Address":"Shenandoah Way",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 30, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Pittsburgh",
+    "Address":"Brushton Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 27, 2015",
+    "State":"Illinois",
+    "City or County":"Rockford",
+    "Address":"900 block of Kent Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 26, 2015",
+    "State":"Louisiana",
+    "City or County":"New Orleans",
+    "Address":"Piety and Treasure street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 26, 2015",
+    "State":"Missouri",
+    "City or County":"Kansas City",
+    "Address":"Thompson and Colorado",
+    "Killed":"2",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 25, 2015",
+    "State":"Virginia",
+    "City or County":"Hopewell",
+    "Address":"500 block of N. 7th Ave",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 24, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Erie",
+    "Address":"200 block of West 29th Street",
+    "Killed":"2",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 23, 2015",
+    "State":"Louisiana",
+    "City or County":"Lafayette",
+    "Address":"3141 Johnson Street",
+    "Killed":"3",
+    "Injured":"9",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 22, 2015",
+    "State":"Georgia",
+    "City or County":"Suwanee",
+    "Address":"5500 block of Old Atlanta Road",
+    "Killed":"5",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 21, 2015",
+    "State":"Florida",
+    "City or County":"Miami Gardens",
+    "Address":"Northwest 25th Avenue and Miami Gardens Drive",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 20, 2015",
+    "State":"New York",
+    "City or County":"Bronx",
+    "Address":"E. 153rd St. and the Grand Concourse",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 19, 2015",
+    "State":"Kentucky",
+    "City or County":"Louisville",
+    "Address":"2928 W Kentucky St",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 19, 2015",
+    "State":"Virginia",
+    "City or County":"Suffolk",
+    "Address":"100 block of North Capitol Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 19, 2015",
+    "State":"North Carolina",
+    "City or County":"Rocky Mount",
+    "Address":"Interstate 64 and Raliegh Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 18, 2015",
+    "State":"California",
+    "City or County":"San Diego",
+    "Address":"200 block of South Bancroft Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 18, 2015",
+    "State":"California",
+    "City or County":"Santa Paula",
+    "Address":"Ojai-Santa Paula Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 18, 2015",
+    "State":"Oregon",
+    "City or County":"Salem",
+    "Address":"1550 Weston Ct NE",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 18, 2015",
+    "State":"Louisiana",
+    "City or County":"Baton Rouge",
+    "Address":"300 Block of Brice Street",
+    "Killed":"2",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 17, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"4400 block of W. Maypole",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 17, 2015",
+    "State":"Ohio",
+    "City or County":"Cincinnati (Westwood)",
+    "Address":"3100 block of Sunshine Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 16, 2015",
+    "State":"Tennessee",
+    "City or County":"Chattanooga",
+    "Address":"4051 Amnicola Highway",
+    "Killed":"6",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 16, 2015",
+    "State":"Texas",
+    "City or County":"Dallas",
+    "Address":"Singleton and Hampton",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 15, 2015",
+    "State":"Georgia",
+    "City or County":"Atlanta",
+    "Address":"500 block of Center Hill Avenue",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 15, 2015",
+    "State":"Maryland",
+    "City or County":"Baltimore",
+    "Address":"3500 block of West Garrison Boulevard",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 15, 2015",
+    "State":"Ohio",
+    "City or County":"Cleveland",
+    "Address":"700 block of Thornhill",
+    "Killed":"0",
+    "Injured":"7",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 15, 2015",
+    "State":"Michigan",
+    "City or County":"Detroit",
+    "Address":"9200 block of Memorial",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 15, 2015",
+    "State":"South Carolina",
+    "City or County":"Holly Hill",
+    "Address":"7050 Old State Road",
+    "Killed":"4",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 14, 2015",
+    "State":"Missouri",
+    "City or County":"Saint Louis",
+    "Address":"1100 block of Riverview",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 13, 2015",
+    "State":"California",
+    "City or County":"Norwalk",
+    "Address":"11959 162nd Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 13, 2015",
+    "State":"California",
+    "City or County":"Stockton",
+    "Address":"400 block of McCloud Avenue",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 12, 2015",
+    "State":"Illinois",
+    "City or County":"River Forest",
+    "Address":"116 Lathrop Avenue",
+    "Killed":"2",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 12, 2015",
+    "State":"New Jersey",
+    "City or County":"Jersey City",
+    "Address":"Sip and Van Wagenen avenues",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 7, 2015",
+    "State":"Maryland",
+    "City or County":"Baltimore",
+    "Address":"900 block of West Fayette Street",
+    "Killed":"3",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 5, 2015",
+    "State":"Louisiana",
+    "City or County":"Shreveport",
+    "Address":"3500 block of Hearne Avenue",
+    "Killed":"0",
+    "Injured":"8",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 5, 2015",
+    "State":"Indiana",
+    "City or County":"Fort Wayne",
+    "Address":"1400 block of McCulloch Street",
+    "Killed":"0",
+    "Injured":"9",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 5, 2015",
+    "State":"New Jersey",
+    "City or County":"East Orange",
+    "Address":"200 block of S. Clinton St",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 4, 2015",
+    "State":"Kentucky",
+    "City or County":"Louisville",
+    "Address":"2500 block of West Broadway",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 4, 2015",
+    "State":"Massachusetts",
+    "City or County":"Pittsfield",
+    "Address":"Dewey Avenue",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 4, 2015",
+    "State":"New York",
+    "City or County":"Syracuse",
+    "Address":"Bellevue and Rich Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 4, 2015",
+    "State":"Texas",
+    "City or County":"San Antonio",
+    "Address":"1100 block of West Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 4, 2015",
+    "State":"District of Columbia",
+    "City or County":"Washington",
+    "Address":"2600 Douglas Place SE",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"July 2, 2015",
+    "State":"Indiana",
+    "City or County":"Indianapolis",
+    "Address":"Lynn and Michigan",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 29, 2015",
+    "State":"Florida",
+    "City or County":"Opa Locka",
+    "Address":"13450 N.W. 30th Ave",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 28, 2015",
+    "State":"Michigan",
+    "City or County":"Detroit",
+    "Address":"Gratiot and Loretto",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 28, 2015",
+    "State":"Illinois",
+    "City or County":"Venice",
+    "Address":"N/A",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 28, 2015",
+    "State":"Delaware",
+    "City or County":"Harrington",
+    "Address":"100 block of East St",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 27, 2015",
+    "State":"Massachusetts",
+    "City or County":"Taunton",
+    "Address":"Weir Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 27, 2015",
+    "State":"Michigan",
+    "City or County":"Detroit",
+    "Address":"Stringham Court",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 24, 2015",
+    "State":"New York",
+    "City or County":"New York (Manhattan)",
+    "Address":"2110 Madison Ave",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 22, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Philadelphia",
+    "Address":"700 block of East Hilton Street",
+    "Killed":"0",
+    "Injured":"7",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 21, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Pittsburgh (Wilkinsburg)",
+    "Address":"Rebecca and East Swissvale Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 21, 2015",
+    "State":"Kentucky",
+    "City or County":"Lexington",
+    "Address":"726 Georgetown St",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 20, 2015",
+    "State":"Michigan",
+    "City or County":"Detroit",
+    "Address":"Dexter and Webb",
+    "Killed":"1",
+    "Injured":"11",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 20, 2015",
+    "State":"North Carolina",
+    "City or County":"Morven",
+    "Address":"N/A",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 20, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Philadelphia",
+    "Address":"4100 block of Ogden Street",
+    "Killed":"0",
+    "Injured":"11",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 19, 2015",
+    "State":"Rhode Island",
+    "City or County":"Woonsocket",
+    "Address":"80 River Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 17, 2015",
+    "State":"South Carolina",
+    "City or County":"Charleston",
+    "Address":"110 Calhoun Street",
+    "Killed":"9",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 16, 2015",
+    "State":"Florida",
+    "City or County":"Miami Gardens",
+    "Address":"600 block of Northwest 177th Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 15, 2015",
+    "State":"New York",
+    "City or County":"Brooklyn",
+    "Address":"673 Flatbush Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 14, 2015",
+    "State":"Oklahoma",
+    "City or County":"Tulsa",
+    "Address":"1800 block of North Kingston",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 14, 2015",
+    "State":"Missouri",
+    "City or County":"Saint Louis",
+    "Address":"1400 block of North Market Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 14, 2015",
+    "State":"New Jersey",
+    "City or County":"Camden",
+    "Address":"2800 block of Saunders Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 13, 2015",
+    "State":"Ohio",
+    "City or County":"Columbus",
+    "Address":"1623 E. Hudson Street",
+    "Killed":"4",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 13, 2015",
+    "State":"Georgia",
+    "City or County":"Fayetteville",
+    "Address":"600 block of Highway 279",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 13, 2015",
+    "State":"Georgia",
+    "City or County":"Milledgeville",
+    "Address":"451 North Flynn Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 13, 2015",
+    "State":"New York",
+    "City or County":"Bronx",
+    "Address":"2409 Creston Avenue",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 13, 2015",
+    "State":"Oklahoma",
+    "City or County":"Oklahoma City",
+    "Address":"500 block of Se 69th St",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 12, 2015",
+    "State":"Florida",
+    "City or County":"Allapattah",
+    "Address":"24th Avenue and 36th Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 11, 2015",
+    "State":"Connecticut",
+    "City or County":"Bridgeport",
+    "Address":"468 Trumbull Avenue",
+    "Killed":"1",
+    "Injured":"8",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 10, 2015",
+    "State":"California",
+    "City or County":"Los Angeles",
+    "Address":"South Vermont Avenue and West 88th Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 9, 2015",
+    "State":"Missouri",
+    "City or County":"Saint Louis",
+    "Address":"North Market Street and North Spring Avenue",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 7, 2015",
+    "State":"Montana",
+    "City or County":"Deer Lodge",
+    "Address":"Boulder Creek Road",
+    "Killed":"5",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 6, 2015",
+    "State":"New York",
+    "City or County":"Buffalo",
+    "Address":"100 block of Warren Avenue",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 6, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"100 block of North Lorel Avenue",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 5, 2015",
+    "State":"Iowa",
+    "City or County":"Davenport",
+    "Address":"900 block of West 3rd St",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 5, 2015",
+    "State":"Louisiana",
+    "City or County":"New Orleans",
+    "Address":"2100 Block of Governor Nicholls Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"June 3, 2015",
+    "State":"New York",
+    "City or County":"Wyandanch",
+    "Address":"Davidson Street",
+    "Killed":"3",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 31, 2015",
+    "State":"Ohio",
+    "City or County":"Cleveland",
+    "Address":"16209 block of Laverne Avenue",
+    "Killed":"3",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 31, 2015",
+    "State":"Maryland",
+    "City or County":"Springdale",
+    "Address":"9222 Ardwick Ardmore Road",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 31, 2015",
+    "State":"Connecticut",
+    "City or County":"New Haven",
+    "Address":"849 Chapel Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 31, 2015",
+    "State":"Georgia",
+    "City or County":"Conyers",
+    "Address":"4669 Bell Road SE",
+    "Killed":"3",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 30, 2015",
+    "State":"California",
+    "City or County":"San Diego",
+    "Address":"4200 block of Market Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 28, 2015",
+    "State":"Nebraska",
+    "City or County":"Omaha",
+    "Address":"84th and Q",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 28, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"6200 block of South Honore Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 28, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Chester",
+    "Address":"2700 block of West 3rd Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 26, 2015",
+    "State":"Louisiana",
+    "City or County":"New Orleans",
+    "Address":"6700 Block of Tara Lane",
+    "Killed":"2",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 25, 2015",
+    "State":"Illinois",
+    "City or County":"Decatur",
+    "Address":"1816 N. Water",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 24, 2015",
+    "State":"Michigan",
+    "City or County":"Flint",
+    "Address":"W. 12th Street and Hammerberg Road.",
+    "Killed":"0",
+    "Injured":"7",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 24, 2015",
+    "State":"Massachusetts",
+    "City or County":"Brockton",
+    "Address":"1002 Main St",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 24, 2015",
+    "State":"Alabama",
+    "City or County":"Montgomery",
+    "Address":"Smiley Court",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 24, 2015",
+    "State":"Missouri",
+    "City or County":"Saint Louis",
+    "Address":"2700 block of Dayton",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 23, 2015",
+    "State":"California",
+    "City or County":"Fresno",
+    "Address":"2400 block of South 9th Street",
+    "Killed":"2",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 20, 2015",
+    "State":"Maryland",
+    "City or County":"Baltimore",
+    "Address":"800 block of Linwood Avenue",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 18, 2015",
+    "State":"Missouri",
+    "City or County":"Kinloch",
+    "Address":"8000 block of School Way",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 18, 2015",
+    "State":"Florida",
+    "City or County":"Miami",
+    "Address":"Northwest 75th Street and Northwest 16th Avenue",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 17, 2015",
+    "State":"Texas",
+    "City or County":"Waco",
+    "Address":"4671 S Jack Kultgen Expy",
+    "Killed":"9",
+    "Injured":"18",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 16, 2015",
+    "State":"Wisconsin",
+    "City or County":"Milwaukee",
+    "Address":"28th Street and Auer Avenue",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 16, 2015",
+    "State":"New York",
+    "City or County":"Rochester",
+    "Address":"188 Lewis Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 16, 2015",
+    "State":"Maryland",
+    "City or County":"Baltimore",
+    "Address":"1700 block of North Broadway",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 12, 2015",
+    "State":"Maryland",
+    "City or County":"Capitol Heights",
+    "Address":"Pard Road",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 12, 2015",
+    "State":"Arizona",
+    "City or County":"Tucson",
+    "Address":"800 block of West Calle Medina Road",
+    "Killed":"5",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 10, 2015",
+    "State":"Ohio",
+    "City or County":"Cleveland",
+    "Address":"3600 block of Bosworth Road",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 10, 2015",
+    "State":"New Jersey",
+    "City or County":"Jersey City",
+    "Address":"Bostwick Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 10, 2015",
+    "State":"New Jersey",
+    "City or County":"Newark",
+    "Address":"19th Avenue and South 16th Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 7, 2015",
+    "State":"Ohio",
+    "City or County":"Cincinnati",
+    "Address":"2300 block of Baltimore Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 4, 2015",
+    "State":"New York",
+    "City or County":"Buffalo",
+    "Address":"100 block of Roosevelt Avenue",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 3, 2015",
+    "State":"Indiana",
+    "City or County":"South Bend",
+    "Address":"1600 block of South William Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 3, 2015",
+    "State":"Wisconsin",
+    "City or County":"Menasha",
+    "Address":"North Lake Street",
+    "Killed":"4",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 3, 2015",
+    "State":"Texas",
+    "City or County":"Houston",
+    "Address":"San Jacinto at Elgin",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 3, 2015",
+    "State":"New York",
+    "City or County":"Bronx",
+    "Address":"University Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 3, 2015",
+    "State":"Ohio",
+    "City or County":"Dayton",
+    "Address":"2801 Germantown Street",
+    "Killed":"1",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"May 1, 2015",
+    "State":"Wisconsin",
+    "City or County":"Milwaukee",
+    "Address":"3700 block of 37th Street",
+    "Killed":"2",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 27, 2015",
+    "State":"New York",
+    "City or County":"Brooklyn",
+    "Address":"1365 Flatbush Ave",
+    "Killed":"2",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 27, 2015",
+    "State":"Arizona",
+    "City or County":"Gila Bend",
+    "Address":"State Route 85",
+    "Killed":"2",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 25, 2015",
+    "State":"New Jersey",
+    "City or County":"Trenton",
+    "Address":"Wood Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 25, 2015",
+    "State":"New York",
+    "City or County":"Gates",
+    "Address":"24 Hinchey Rd",
+    "Killed":"1",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 21, 2015",
+    "State":"Texas",
+    "City or County":"Killeen",
+    "Address":"420 Gilmer St.",
+    "Killed":"2",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 19, 2015",
+    "State":"Virginia",
+    "City or County":"Richmond",
+    "Address":"200 block of West Hill Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 18, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Williamsport",
+    "Address":"300 block of Pine Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 18, 2015",
+    "State":"Alabama",
+    "City or County":"Montgomery",
+    "Address":"1800 block of Gibbs Court",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 18, 2015",
+    "State":"North Carolina",
+    "City or County":"Lumberton",
+    "Address":"Martin Luther King Drive",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 18, 2015",
+    "State":"North Carolina",
+    "City or County":"Charlotte",
+    "Address":"Bost Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 18, 2015",
+    "State":"New Jersey",
+    "City or County":"Patterson",
+    "Address":"230 Rosa Parks Boulevard",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 16, 2015",
+    "State":"Arizona",
+    "City or County":"Phoenix",
+    "Address":"4300 block of East Anderson Drive",
+    "Killed":"5",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 7, 2015",
+    "State":"Georgia",
+    "City or County":"Rome",
+    "Address":"20 Copeland Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 5, 2015",
+    "State":"Pennsylvania",
+    "City or County":"Pittsburgh",
+    "Address":"Dinwiddie Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 5, 2015",
+    "State":"Kentucky",
+    "City or County":"Louisville",
+    "Address":"40th and Grand Street",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 5, 2015",
+    "State":"Indiana",
+    "City or County":"Indianapolis",
+    "Address":"5000 block of Wildflower Court",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 5, 2015",
+    "State":"Michigan",
+    "City or County":"Benton Harbor",
+    "Address":"1000 block of Blossom Lane",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 3, 2015",
+    "State":"Florida",
+    "City or County":"Daytona Beach",
+    "Address":"300 block of Henry Butts Drive",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"April 2, 2015",
+    "State":"Maryland",
+    "City or County":"Baltimore",
+    "Address":"1900 block of West Lanvale Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 27, 2015",
+    "State":"Florida",
+    "City or County":"Panama City Beach",
+    "Address":"5312 Thomas Drive",
+    "Killed":"0",
+    "Injured":"7",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 26, 2015",
+    "State":"Texas",
+    "City or County":"Amarillo",
+    "Address":"3100 block of Redwood",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 24, 2015",
+    "State":"Indiana",
+    "City or County":"Indianapolis",
+    "Address":"3100 block of North Harding Street",
+    "Killed":"4",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 23, 2015",
+    "State":"Tennessee",
+    "City or County":"Clarksville",
+    "Address":"900 block of Carpenter Street",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 22, 2015",
+    "State":"New Mexico",
+    "City or County":"Albuquerque",
+    "Address":"10140 Lomas NE",
+    "Killed":"1",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 21, 2015",
+    "State":"Florida",
+    "City or County":"Tampa",
+    "Address":"1802 Seventh Ave",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 18, 2015",
+    "State":"New Jersey",
+    "City or County":"Newark",
+    "Address":"200 block of Clinton Place",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 18, 2015",
+    "State":"Arizona",
+    "City or County":"Mesa",
+    "Address":"1504 West Main Street",
+    "Killed":"1",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 17, 2015",
+    "State":"California",
+    "City or County":"Stockton",
+    "Address":"748 N Madison St",
+    "Killed":"3",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 15, 2015",
+    "State":"California",
+    "City or County":"Compton",
+    "Address":"2700 block of West Alondra Boulevard",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 14, 2015",
+    "State":"Georgia",
+    "City or County":"Atlanta",
+    "Address":"2900 block of Delmar Lane",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 14, 2015",
+    "State":"California",
+    "City or County":"Coachella",
+    "Address":"84000 block of Bagdad Avenue",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 13, 2015",
+    "State":"Mississippi",
+    "City or County":"Brookhaven",
+    "Address":"1097 South First St.",
+    "Killed":"2",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 10, 2015",
+    "State":"Georgia",
+    "City or County":"Columbus",
+    "Address":"3023 Victory Drive",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 9, 2015",
+    "State":"Illinois",
+    "City or County":"Chicago",
+    "Address":"200 block of West 105th",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 8, 2015",
+    "State":"South Carolina",
+    "City or County":"Seneca",
+    "Address":"Wells Highway",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 4, 2015",
+    "State":"California",
+    "City or County":"San Bernardino",
+    "Address":"190 block of West Club Center Drive",
+    "Killed":"2",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 1, 2015",
+    "State":"Florida",
+    "City or County":"Orange County",
+    "Address":"4900 block of Steyr Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"March 1, 2015",
+    "State":"Michigan",
+    "City or County":"Detroit",
+    "Address":"9855 Chalmers St",
+    "Killed":"1",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 28, 2015",
+    "State":"Maryland",
+    "City or County":"Baltimore",
+    "Address":"4300 block of Welbourne Road",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 26, 2015",
+    "State":"Missouri",
+    "City or County":"Tyrone",
+    "Address":"18279 Highway H",
+    "Killed":"8",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 25, 2015",
+    "State":"Texas",
+    "City or County":"Houston",
+    "Address":"Mallow St.",
+    "Killed":"3",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 22, 2015",
+    "State":"Texas",
+    "City or County":"Killeen",
+    "Address":"1706 Godman St.",
+    "Killed":"4",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 22, 2015",
+    "State":"Georgia",
+    "City or County":"Clarkesville",
+    "Address":"281 Lower Pond Court",
+    "Killed":"3",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 22, 2015",
+    "State":"South Carolina",
+    "City or County":"Charleston",
+    "Address":"4224 Dorchester Road",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 20, 2015",
+    "State":"California",
+    "City or County":"Sacramento",
+    "Address":"1417 R Street",
+    "Killed":"0",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 17, 2015",
+    "State":"Arkansas",
+    "City or County":"Little Rock",
+    "Address":"7900 Scott Hamilton",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 15, 2015",
+    "State":"California",
+    "City or County":"Long Beach",
+    "Address":"200 block of W. 14th Street",
+    "Killed":"0",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 9, 2015",
+    "State":"Florida",
+    "City or County":"New Port Richey",
+    "Address":"9552 Adler Street",
+    "Killed":"3",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 8, 2015",
+    "State":"Tennessee",
+    "City or County":"Maury City",
+    "Address":"251 Dupree Road",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 7, 2015",
+    "State":"Georgia",
+    "City or County":"Douglasville",
+    "Address":"3640 Willow Tree Circle",
+    "Killed":"5",
+    "Injured":"2",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 6, 2015",
+    "State":"Oklahoma",
+    "City or County":"Tulsa",
+    "Address":"1219 N. Sheridan Road",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 5, 2015",
+    "State":"Ohio",
+    "City or County":"Warrensville Heights",
+    "Address":"Harvard Road",
+    "Killed":"3",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 1, 2015",
+    "State":"New York",
+    "City or County":"Syracuse",
+    "Address":"1217 West Fayette Street",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"February 1, 2015",
+    "State":"New York",
+    "City or County":"New York (Manhattan)",
+    "Address":"3345 Broadway",
+    "Killed":"1",
+    "Injured":"4",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"January 31, 2015",
+    "State":"Georgia",
+    "City or County":"Lagrange",
+    "Address":"100 block of Woodstream Trail",
+    "Killed":"4",
+    "Injured":"0",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"January 28, 2015",
+    "State":"Georgia",
+    "City or County":"Dekalb County",
+    "Address":"1600 block of Panola Road",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"January 26, 2015",
+    "State":"California",
+    "City or County":"Stockton",
+    "Address":"1500 block of E. 9th Street",
+    "Killed":"1",
+    "Injured":"3",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"January 24, 2015",
+    "State":"New York",
+    "City or County":"Arverne (Queens)",
+    "Address":"231-11 148th Avenue",
+    "Killed":"4",
+    "Injured":"1",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"January 24, 2015",
+    "State":"Nebraska",
+    "City or County":"Omaha",
+    "Address":"3402 Parker St",
+    "Killed":"3",
+    "Injured":"5",
+    "Operations":"N/A"
+  },
+  {
+    "Incident Date":"January 23, 2015",
+    "State":"Massachusetts",
+    "City or County":"Boston",
+    "Address":"954 Parker Street",
+    "Killed":"0",
+    "Injured":"6",
+    "Operations":"N/A"
+  }
+]
