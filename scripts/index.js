@@ -1,0 +1,1 @@
+var googleMap = new GoogleMap();
