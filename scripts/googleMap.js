@@ -1,9 +1,11 @@
 // US Map Model
+var prev = false;
 
 GoogleMap = function() {
   this.model();
   this.view();
   this.controller();
+
 };
 
 GoogleMap.prototype.model = function() {
@@ -19,7 +21,6 @@ GoogleMap.prototype.controller = function() {
 };
 
 GoogleMap.initMap = function() {
-  var map;
   var coordinate = {lat:37.09024,lng:-95.712891}; //Coordinate for the USA
   var loadMarker = false;
   var mapOptions = {
@@ -33,18 +34,19 @@ GoogleMap.initMap = function() {
     console.log('Returning data from ' + dataURL);
   }, error: function() {
     console.log('Failed to load data from ' + dataURL);
-  }}).done(function(data) {
-    markerJSON = data;
-    loadMarker = true;
-  });
-  map = new google.maps.Map(document.getElementById('map'),mapOptions);
+  }})
+    .done(function(data) {
+      markerJSON = data;
+      loadMarker = true;
+    });
+  this.map = new google.maps.Map(document.getElementById('map'),mapOptions);
   var markerCounter = 0;
   var geocoder = new google.maps.Geocoder();
-  var loadMapMarkers = setInterval(function(){
+  setInterval(function() {
     if (loadMarker) {
       loadMarker = false;
       var marker = markerJSON[markerCounter];
-      var address = (marker["Address"] + ' ' + marker["City or County"] + ', ' + marker["State"]);
+      var address = (marker['Address'] + ' ' + marker['City or County'] + ', ' + marker['State']);
       geocoder.geocode({'address':address}, function(results,status) {
         if (status == google.maps.GeocoderStatus.OK) {
           var latitude = results[0].geometry.location.lat();
@@ -54,8 +56,10 @@ GoogleMap.initMap = function() {
           var mapMarker = new google.maps.Marker({
             position: coordinate,
             map: map,
-            title: marker["Incident Date"]
+            title: marker['Incident Date']
           });
+
+          GoogleMap.attachInfo(mapMarker, marker);
           markerCounter++;
           console.log(markerCounter);
           loadMarker = true;
@@ -71,4 +75,19 @@ GoogleMap.initMap = function() {
       */
     }
   },1000);
+};
+
+GoogleMap.attachInfo = function(marker, info) {
+  var infoWindow = new google.maps.InfoWindow({
+    content:
+      '<p>' + info['Incident Date'] + '</p><p>Killed: ' +
+      info['Killed'] + '</p><p>Injured: ' + info['Injured'] + '</p>' +
+      '<div id=pano></div>'
+  });
+  marker.addListener('click', function() {
+    if(prev) prev.close();
+    prev = infoWindow;
+    infoWindow.open(this.map, marker);
+    this.pano = new google.maps.StreetViewPanorama($('#pano')[0], {position: marker.position});
+  });
 };

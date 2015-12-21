@@ -1,1 +1,3 @@
-var googleMap = new GoogleMap();
+$(function() {
+  var googleMap = new GoogleMap();
+});
