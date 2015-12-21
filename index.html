@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Gun Violence Tracker</title>
     <style>
       #map {
         width: 1000px;
         height: 500px;
       }
     </style>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script type="text/javascript">
+
+    <!-- Bootstrap -->
+
+    <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css'/>
+    <link rel='stylesheet' href='/vendor/styles/bootstrap/css/bootstrap.min.css' type='text/css'>
+
+    <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
+    <script src='https://maps.googleapis.com/maps/api/js'></script>
+    <script type='text/javascript'>
       function initMap() {
         var map;
         var coordinate = {lat:37.09024,lng:-95.712891}; //Coordinate for the USA
@@ -70,5 +80,12 @@
   </head>
   <body>
     <div id="map"></div>
+
+    <h1>HELLO</h1>
+
+
+    <script src='https://cdn.rawgit.com/visionmedia/page.js/master/page.js'></script>
+    <script src='/vendor/webDB.js'></script>
+    <script src='/vendor/styles/bootstrap/js/bootstrap.min.js'></script>
   </body>
 </html>
