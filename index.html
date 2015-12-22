@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-<<<<<<< HEAD
+
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Gun Violence Tracker</title>
-    <style>
-      #map {
-        width: 1000px;
-        height: 500px;
-      }
-    </style>
 
     <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css'/>
     <link rel='stylesheet' href='/vendor/styles/bootstrap/css/bootstrap.css' type='text/css'>
+    <link rel='stylesheet' href='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.css' type='text/css'>
     <link rel='stylesheet' href='/styles/base.css'>
     <link rel='stylesheet' href='/styles/layout.css'>
     <link rel='stylesheet' href='/styles/module.css'>
@@ -26,11 +21,12 @@
     <script src='https://maps.googleapis.com/maps/api/js'></script>
     <script src='https://cdn.rawgit.com/visionmedia/page.js/master/page.js'></script>
 
->>>>>>> origin/staging
   </head>
-    <body>
+  <body>
 
-    <nav class='navbar navbar-inverse'>
+    <div class='overlay'></div>
+
+    <nav class='navbar navbar-inverse navbar-fixed-top'>
       <div class='container-fluid'>
         <div class='navbar-header'>
           <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
@@ -52,38 +48,36 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <button type='button' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModal'>
-      Test Modal</button>
+    <div class="container textOver">
+  		<div class="row">
+  			<div class="col-md-6 col-md-offset-3 panel panel-default">
 
-<!-- Modal -->
-<div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
-  <div class='modal-dialog' role='document'>
-      <div class='modal-dialog modal-lg'>
-        <div class='modal-content'>
-          <div class='modal-header'>
-            <h4 class='modal-title' id='myModalLabel'>Gun Violence Tracker</h4>
-          </div>
-          <div class='modal-body'>
-            <p>COPY FOR INTRO</p>
-          </div>
-          <div class='modal-footer'>
-            <button type='button' class='btn btn-default' data-dismiss='modal'>Continue</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+		      <h1 class="margin-base-vertical">Gun Violence Tracker</h1>
 
-  <div id='map'></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+                elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed
+                augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+            </p>
 
-  <h1>HELLO</h1>
+            <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.
+                Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas
+                porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
+                Fusce ac turpis quis ligula lacinia aliquet.
+            </p>
 
-  <h1>TEST</h1>
+    				<a id='continue' href='#'>Continue</a>
 
-    <script src='https://cdn.rawgit.com/visionmedia/page.js/master/page.js'></script>
-    <script src='/vendor/webDB.js'></script>
-    <script src='/vendor/styles/bootstrap/js/bootstrap.min.js'></script>
-    <script src='/scripts/googleAPIKey.js'></script>
+  			</div><!-- //main content -->
+  		</div><!-- //row -->
+  	</div> <!-- //container -->
+
+    <div id='map'></div>
+
+    <!-- <script src='/vendor/webDB.js'></script> -->
+    <script src='/vendor/styles/bootstrap/js/bootstrap.js'></script>
+    <script src='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.js'></script>
+    <!-- <script src='/scripts/googleAPIKey.js'></script> -->
     <script src='/scripts/googleMap.js'></script>
     <script src='/scripts/index.js'></script>
   </body>
