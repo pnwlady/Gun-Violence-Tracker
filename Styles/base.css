@@ -34,3 +34,6 @@ body { padding-top: 70px; }
   background-color: #0E0C15;
   opacity: .8;
 }
+.container.takeActionModal{
+  display: none;
+}
