@@ -1,18 +1,84 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Gun Violence Tracker</title>
+
+    <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css'/>
+    <link rel='stylesheet' href='/vendor/styles/bootstrap/css/bootstrap.css' type='text/css'>
+    <link rel='stylesheet' href='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.css' type='text/css'>
     <link rel='stylesheet' href='/styles/base.css'>
     <link rel='stylesheet' href='/styles/layout.css'>
     <link rel='stylesheet' href='/styles/module.css'>
     <link rel='stylesheet' href='/styles/state.css'>
     <link rel='stylesheet' href='/styles/theme.css'>
+    <link rel='stylesheet' href='/Styles/base.css' type='text/css'>
+
+    <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
+    <script src='https://maps.googleapis.com/maps/api/js'></script>
+    <script src='https://cdn.rawgit.com/visionmedia/page.js/master/page.js'></script>
+
   </head>
   <body>
-    <div id="map"></div>
+
+    <div class='overlay'></div>
+
+    <nav class='navbar navbar-inverse navbar-fixed-top'>
+      <div class='container-fluid'>
+        <div class='navbar-header'>
+          <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
+            <span class='sr-only'>Toggle navigation</span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='navbar-brand' href='#'>Gun Violence Tracker</a>
+        </div>
+
+        <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+          <ul class='nav navbar-nav'>
+            <li class='active'><a href='#'>United States <span class='sr-only'>(current)</span></a></li>
+            <li class='uniformLinks'><a href='#'>International</a></li>
+            <li class='uniformLinks'><a href='#'>Take Action</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container textOver">
+  		<div class="row">
+  			<div class="col-md-6 col-md-offset-3 panel panel-default">
+
+		      <h1 class="margin-base-vertical">Gun Violence Tracker</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+                elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed
+                augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+            </p>
+
+            <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.
+                Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas
+                porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
+                Fusce ac turpis quis ligula lacinia aliquet.
+            </p>
+
+    				<a id='continue' href='#'>Continue</a>
+
+  			</div><!-- //main content -->
+  		</div><!-- //row -->
+  	</div> <!-- //container -->
+
+    <div id='map'></div>
+
+    <!-- <script src='/vendor/webDB.js'></script> -->
+    <script src='/vendor/styles/bootstrap/js/bootstrap.js'></script>
+    <script src='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.js'></script>
+    <!-- <script src='/scripts/googleAPIKey.js'></script> -->
+    <script src='/scripts/googleMap.js'></script>
+    <script src='/scripts/index.js'></script>
   </body>
-  <script src="/scripts/googleMap.js"></script>
-  <script src="/scripts/index.js"></script>
 </html>
