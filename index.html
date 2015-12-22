@@ -41,7 +41,7 @@
           <ul class='nav navbar-nav'>
             <li class='active'><a href='/us'>United States <span class='sr-only'>(current)</span></a></li>
             <li class='uniformLinks'><a href='/intl'>International</a></li>
-            <li class='uniformLinks'><a href='javascript:void(0);'>Take Action</a></li>
+            <li class='uniformLinks'><a href='javascript:void(0);' onClick='index.takeAction()'>Take Action</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -50,23 +50,28 @@
     <div class="container textOver">
   		<div class="row">
   			<div class="col-md-6 col-md-offset-3 panel panel-default">
-
 		      <h1 class="margin-base-vertical">Gun Violence Tracker</h1>
-
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-                Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
-                elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed
-                augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+                Praesent libero. Sed cursus ante dapibus diam.
             </p>
-
             <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.
-                Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas
-                porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
-                Fusce ac turpis quis ligula lacinia aliquet.
+                Maecenas mattis. Sed convallis tristique sem.
             </p>
-
     				<a id='continue' href='javascript:void(0);'>Continue</a>
+  			</div><!-- //main content -->
+  		</div><!-- //row -->
+  	</div> <!-- //container -->
 
+    <div class="container takeActionModal">
+  		<div class="row">
+  			<div class="col-md-6 col-md-offset-3 panel panel-default">
+		      <h1 class="margin-base-vertical">Additional Resources</h1>
+            <p id='dataFrom'>Data on this site from:</p>
+              <ul>
+                <li><a href='http://www.theguardian.com/news/datablog/2013/sep/17/gun-crime-statistics-by-us-state'>The Guardian</a></li>
+                <li><a href='http://www.gunviolencearchive.org/reports'>GunViolenceArchive.org</a></li>
+              </ul>
+            <a id='returnToMap' href='javascript:void(0);'>Return to Map</a>
   			</div><!-- //main content -->
   		</div><!-- //row -->
   	</div> <!-- //container -->

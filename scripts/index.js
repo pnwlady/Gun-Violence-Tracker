@@ -1,11 +1,15 @@
 var index = {};
 
 index.modal = function() {
+  $('.container.takeActionModal').hide();
   $('.container.textOver').fadeIn();
   $('.overlay').fadeIn(1000);
 };
 
 index.googleMap = function() {
+  $('.container.textOver').hide();
+  $('.container.takeActionModal').hide();
+  $('.overlay').fadeOut(1000);
   $('#imap').empty();
   if(index.gMap) {
     index.gMap.render();
@@ -15,11 +19,16 @@ index.googleMap = function() {
 };
 
 index.intlMap = function() {
+  $('.container.textOver').hide();
+  $('.container.takeActionModal').hide();
+  $('.overlay').fadeOut(1000);
   $('#gmap').empty();
 };
 
 index.takeAction = function() {
-  $('#takeActionModal').modal('show');
+  $('.container.textOver').hide();
+  $('.container.takeActionModal').fadeIn();
+  $('.overlay').fadeIn(1000);
 };
 
 $(function() {
@@ -29,6 +38,9 @@ $(function() {
     $('.container.textOver').hide();
     $('.overlay').fadeOut(1000);
   });
-
-
+  $('#returnToMap').on('click', function(event){
+    event.preventDefault();
+    $('.container.takeActionModal').hide();
+    $('.overlay').fadeOut(1000);
+  });
 });
