@@ -9,18 +9,17 @@
 
     <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css'/>
     <link rel='stylesheet' href='/vendor/styles/bootstrap/css/bootstrap.css' type='text/css'>
-    <link rel='stylesheet' href='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.css' type='text/css'>
+    <!-- <link rel='stylesheet' href='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.css' type='text/css'> -->
     <link rel='stylesheet' href='/styles/base.css'>
     <link rel='stylesheet' href='/styles/layout.css'>
     <link rel='stylesheet' href='/styles/module.css'>
     <link rel='stylesheet' href='/styles/state.css'>
     <link rel='stylesheet' href='/styles/theme.css'>
-    <link rel='stylesheet' href='/Styles/base.css' type='text/css'>
 
     <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
     <script src='https://maps.googleapis.com/maps/api/js'></script>
     <script src='https://cdn.rawgit.com/visionmedia/page.js/master/page.js'></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
   </head>
   <body>
 
@@ -40,9 +39,9 @@
 
         <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
           <ul class='nav navbar-nav'>
-            <li class='active'><a href='#'>United States <span class='sr-only'>(current)</span></a></li>
-            <li class='uniformLinks'><a href='#'>International</a></li>
-            <li class='uniformLinks'><a href='javascript:void();'>Take Action</a></li>
+            <li class='active'><a href='/us'>United States <span class='sr-only'>(current)</span></a></li>
+            <li class='uniformLinks'><a href='/intl'>International</a></li>
+            <li class='uniformLinks'><a href='javascript:void(0);'>Take Action</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -66,19 +65,21 @@
                 Fusce ac turpis quis ligula lacinia aliquet.
             </p>
 
-    				<a id='continue' href='#'>Continue</a>
+    				<a id='continue' href='javascript:void(0);'>Continue</a>
 
   			</div><!-- //main content -->
   		</div><!-- //row -->
   	</div> <!-- //container -->
 
-    <div id='map'></div>
+    <div id='gmap'></div>
+    <div id='imap'></div>
 
     <!-- <script src='/vendor/webDB.js'></script> -->
     <script src='/vendor/styles/bootstrap/js/bootstrap.js'></script>
-    <script src='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.js'></script>
+    <!-- <script src='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.js'></script> -->
     <!-- <script src='/scripts/googleAPIKey.js'></script> -->
     <script src='/scripts/googleMap.js'></script>
     <script src='/scripts/index.js'></script>
+    <script src='/scripts/router.js'></script>
   </body>
 </html>

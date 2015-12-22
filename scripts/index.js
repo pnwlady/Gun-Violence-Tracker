@@ -1,7 +1,8 @@
 var index = {};
 
 index.modal = function() {
-  $('#modal').modal('show');
+  $('.container.textOver').fadeIn();
+  $('.overlay').fadeIn(1000);
 };
 
 index.googleMap = function() {
@@ -23,17 +24,11 @@ index.takeAction = function() {
 
 $(function() {
   index.gMap = new GoogleMap();
-
-  var data = {
-    modalName: '',
-    modalLabel: '',
-    title: '',
-    body: ''
-  };
-  $.get('templates/modal.html').done(function(template) {
-    var compiledTemplate = Handlebars.compile(template);
-    var html = compiledTemplate(data);
-    $('#modal').append(html);
+  $('#continue').on('click', function(event){
+    event.preventDefault();
+    $('.container.textOver').hide();
+    $('.overlay').fadeOut(1000);
   });
+
 
 });
