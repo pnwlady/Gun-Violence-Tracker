@@ -9,6 +9,7 @@
   "author": "Code Fellows Students",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.13.3",
     "pushstate-server": "^1.8.1"
   }
 }
