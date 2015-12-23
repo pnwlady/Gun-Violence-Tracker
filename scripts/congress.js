@@ -14,16 +14,17 @@ var filter = function (stateAbbrv) {
 
 abbreviationArray.forEach(function(currentValue, index, aaArray) {
   var stateName = aaArray[index].abbreviation;
-  console.log("this is statename " + stateName);
+  // console.log("this is statename " + stateName);
   filter(stateName);
 });
 
-console.log(contactInfoArray);
+// console.log(contactInfoArray);
+// 
+// $.getJson('data/congress.json', cleanCongress);
 
-//
-// $.getJson('data/congress.json'), function(cv, index, ciaArray) {
-//
-// }
+// cleanCongress = function (data) {
+
+}
 //
 //
 //
