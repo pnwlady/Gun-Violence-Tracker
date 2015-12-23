@@ -61,6 +61,7 @@ input::-moz-focus-inner {
   height: 50px;
   z-index: -5250;
   margin-left: 25px;
+  margin-top: 120px;
   border: 2px solid #111;
   background: #f5f5f5;
 }
