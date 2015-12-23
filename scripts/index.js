@@ -25,11 +25,11 @@ index.intlMap = function() {
   $('#gmap').hide();
 
   $.getJSON('data/internationalData.json', function(data) {
-    var arr = [['ISO code', 'Average firearms per 100 people']];
+    var arr = [['ISO code', '% of homicides by firearm']];
 
     data.forEach(function(element) {
-      if(element['Average firearms per 100 people'] != 'null') {
-        arr.push([{v:element['ISO code'], f:element['Country/Territory']}, Number(element['Average firearms per 100 people'])]);
+      if(element['% of homicides by firearm'] != 'null') {
+        arr.push([{v:element['ISO code'], f:element['Country/Territory']}, Number(element['% of homicides by firearm'])]);
       } else {
         arr.push([{v:element['ISO code'], f:element['Country/Territory']}, undefined]);
       }
