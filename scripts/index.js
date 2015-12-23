@@ -10,7 +10,7 @@ index.googleMap = function() {
   $('.container.textOver').hide();
   $('.container.takeActionModal').hide();
   $('.overlay').fadeOut(1000);
-  $('#imap').empty();
+  $('#imap').hide();
   if(index.gMap) {
     index.gMap.render();
   } else {
@@ -22,16 +22,16 @@ index.intlMap = function() {
   $('.container.textOver').hide();
   $('.container.takeActionModal').hide();
   $('.overlay').fadeOut(1000);
-  $('#gmap').empty();
+  $('#gmap').hide();
 
   $.getJSON('data/internationalData.json', function(data) {
     var arr = [['ISO code', 'Average firearms per 100 people']];
 
     data.forEach(function(element) {
       if(element['Average firearms per 100 people'] != 'null') {
-        arr.push([element['ISO code'], Number(element['Average firearms per 100 people'])]);
+        arr.push([{v:element['ISO code'], f:element['Country/Territory']}, Number(element['Average firearms per 100 people'])]);
       } else {
-        arr.push([element['ISO code'], undefined]);
+        arr.push([{v:element['ISO code'], f:element['Country/Territory']}, undefined]);
       }
     });
 
