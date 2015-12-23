@@ -9,11 +9,11 @@
 
     <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css'/>
     <link rel='stylesheet' href='/vendor/styles/bootstrap/css/bootstrap.css' type='text/css'>
-    <link rel='stylesheet' href='/styles/base.css'>
-    <link rel='stylesheet' href='/styles/layout.css'>
-    <link rel='stylesheet' href='/styles/module.css'>
-    <link rel='stylesheet' href='/styles/state.css'>
-    <link rel='stylesheet' href='/styles/theme.css'>
+    <link rel='stylesheet' href='/styles/base.css' type='text/css'>
+    <link rel='stylesheet' href='/styles/layout.css' type='text/css'>
+    <link rel='stylesheet' href='/styles/module.css' type='text/css'>
+    <link rel='stylesheet' href='/styles/state.css' type='text/css'>
+    <link rel='stylesheet' href='/styles/theme.css' type='text/css'>
 
     <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
     <script src='https://maps.googleapis.com/maps/api/js'></script>
@@ -24,10 +24,8 @@
     <script src='https://cdn.rawgit.com/visionmedia/page.js/master/page.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
   </head>
-  <body>
 
-    <div class='overlay'></div>
-
+  <header>
     <nav class='navbar navbar-inverse navbar-fixed-top'>
       <div class='container-fluid'>
         <div class='navbar-header'>
@@ -49,6 +47,13 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+  </header>
+
+  <body>
+
+    <div class='overlay'></div>
+
+
 
     <div id='topLayerText'>
     <div class="container textOver">
@@ -66,7 +71,7 @@
   		</div><!-- //row -->
   	</div> <!-- //container -->
 
-    <div class="container takeActionModal">
+    <div class="container takeActionModal" hidden>
   		<div class="row">
   			<div class="col-md-6 col-md-offset-3 panel panel-default">
 		      <h1 class="margin-base-vertical">Additional Resources</h1>
