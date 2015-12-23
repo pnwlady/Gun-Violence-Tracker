@@ -19,5 +19,5 @@ As a user, I want to be able to retrieve the specific URL of the map view that I
 
 As a user, I want my settings on my map to persist through browser reloads.
 
-### Contacting Local Representatives}
+### Contacting Local Representatives
 As a user, I want to be able to look up and/or contact local representative to my area so that I can inquire about gun violence issues/legislation.
