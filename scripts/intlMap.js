@@ -9,8 +9,6 @@ IntlMap = function() {
   };
 };
 
-
-
 IntlMap.prototype.render = function(data) {
   var chart = new google.visualization.GeoChart($('#imap')[0]);
   chart.draw(data, this.options);
