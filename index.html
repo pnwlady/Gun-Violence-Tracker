@@ -3,19 +3,23 @@
   <head>
 
     <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Gun Violence Tracker</title>
-
     <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css'/>
     <link rel='stylesheet' href='/vendor/styles/bootstrap/css/bootstrap.css' type='text/css'>
+    <link rel='stylesheet' href='/vendor/styles/jQueryRangeSlider/classic-min.css' type='text/css' />
     <link rel='stylesheet' href='/Styles/base.css' type='text/css'>
     <link rel='stylesheet' href='/Styles/layout.css' type='text/css'>
     <link rel='stylesheet' href='/Styles/module.css' type='text/css'>
     <link rel='stylesheet' href='/Styles/state.css' type='text/css'>
     <link rel='stylesheet' href='/Styles/theme.css' type='text/css'>
-
     <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="vendor/scripts/jQueryRangeSlider/jquery.mousewheel.min.js"></script>
+    <script src="vendor/scripts/jQueryRangeSlider/jQAllRangeSliders-min.js"></script>
     <script src='https://maps.googleapis.com/maps/api/js'></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -84,12 +88,19 @@
   		</div><!-- //row -->
   	</div> <!-- //container -->
 </div>
-    <div id='gmap'></div>
+    <div id='united_states_map'></div>
+    <div id='united_states_map_filters'>
+      <div id='date_range_slider'></div>
+      <div id='united_states_map_location_filter'>
+        <input id="united_states_map_location_input" type="text" name="location" placeholder="Location Search">
+        <div id="united_states_map_location_help">Press "Enter" or "Return" to search.</div>
+      </div>
+    </div>
+    <div id='imap'></div>
     <div class='intlMapToggle'>
       <p id="toggleText"></p>
       <button class="btn btn-primary-outline" onClick='index.iMapChange()'>Toggle Filter</button>
     </div>
-    <div id='imap'></div>
 
     <script src='/vendor/styles/bootstrap/js/bootstrap.js'></script>
     <script src='/scripts/googleMap.js'></script>

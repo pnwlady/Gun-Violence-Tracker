@@ -1,9 +1,9 @@
 var index = {};
-localStorage.setItem('currentMap', '#gmap');
+localStorage.setItem('currentMap', '#united_states_map');
 
 index.chooseActiveMap = function(){
   var currentMap = localStorage.getItem('currentMap');
-  if(currentMap === '#gmap'){
+  if(currentMap === '#united_states_map'){
     $('#US').addClass('active').siblings().removeClass('active');
   }
   else {
@@ -26,19 +26,14 @@ index.modal = function() {
 };
 
 index.googleMap = function() {
-  localStorage.setItem('currentMap', '#gmap');
+  localStorage.setItem('currentMap', '#united_states_map');
   $('#topLayerText').hide();
   $('#imap').hide();
   $('.intlMapToggle').hide();
-  $('#gmap').show();
+  $('#united_states_map').show();
+  $('#united_states_map_filters').show();
   $('.overlay').fadeOut(1000);
   index.chooseActiveMap();
-
-  if(index.gMap) {
-    index.gMap.render();
-  } else {
-    index.gMap = new GoogleMap();
-  }
 };
 
 index.iMapChange = function() {
@@ -59,7 +54,8 @@ index.iMapChange = function() {
 index.intlMap = function() {
   localStorage.setItem('currentMap', '#imap');
   $('#topLayerText').hide();
-  $('#gmap').hide();
+  $('#united_states_map').hide();
+  $('#united_states_map_filters').hide();
   $('#imap').show();
   $('.intlMapToggle').show();
   $('.overlay').fadeOut(1000);
@@ -76,18 +72,21 @@ index.intlMap = function() {
     index.iMap.render(google.visualization.arrayToDataTable(arr));
   });
 };
-
 index.takeAction = function() {
+  $('#takeActionModal').modal('show');
   $('#topLayerText').show();
   $('.container.textOver').hide();
   $('.container.takeActionModal').fadeIn();
   $('.overlay').fadeIn(1000);
   $('#takeAction').addClass('active');
   $('#takeAction').siblings().removeClass('active');
+  $('#international_map').hide();
+  $('#united_states_map').hide();
+  $('#united_states_map_filters').hide();
 };
-
 $(function() {
-  index.gMap = new GoogleMap();
+
+  index.unitedStatesGoogleMap = new GoogleMap('united_states_map','../data/gunViolenceArchive.json');
   index.iMap = new IntlMap();
 
   $('.intlMapToggle').hide();
