@@ -1,24 +1,37 @@
 var index = {};
+localStorage.setItem('currentMap', '#gmap');
+
+index.chooseActiveMap = function(){
+  var currentMap = localStorage.getItem('currentMap');
+  if(currentMap === '#gmap'){
+    $('#US').addClass('active').siblings().removeClass('active');
+  }
+  else {
+    $('#inter').addClass('active').siblings().removeClass('active');
+  }
+};
+
+index.removeText = function(event) {
+  event.preventDefault();
+  $('#topLayerText').hide();
+  $('.overlay').fadeOut(1000);
+  index.chooseActiveMap();
+};
 
 index.modal = function() {
+  $('#topLayerText').show();
   $('.container.takeActionModal').hide();
   $('.container.textOver').fadeIn();
   $('.overlay').fadeIn(1000);
-  $('#topLayerText').show();
-  // $('#US').addClass('active');
-  // $('#US').siblings().removeClass('active');
 };
 
 index.googleMap = function() {
-  $('.container.textOver').hide();
-  $('.container.takeActionModal').hide();
-  $('.overlay').fadeOut(1000);
-
+  localStorage.setItem('currentMap', '#gmap');
+  $('#topLayerText').hide();
   $('#imap').hide();
-
-  $('#US').addClass('active');
-  $('#US').siblings().removeClass('active');
-  $('#imap').empty();
+  $('#gmap').show();
+  $('.overlay').fadeOut(1000);
+  index.chooseActiveMap();
 
   if(index.gMap) {
     index.gMap.render();
@@ -28,10 +41,12 @@ index.googleMap = function() {
 };
 
 index.intlMap = function() {
-  $('.container.textOver').hide();
-  $('.container.takeActionModal').hide();
-  $('.overlay').fadeOut(1000);
+  localStorage.setItem('currentMap', '#imap');
+  $('#topLayerText').hide();
   $('#gmap').hide();
+  $('#imap').show();
+  $('.overlay').fadeOut(1000);
+  index.chooseActiveMap();
 
   $.getJSON('data/internationalData.json', function(data) {
     var arr = [['ISO code', '% of homicides by firearm']];
@@ -46,17 +61,13 @@ index.intlMap = function() {
 
     index.iMap.render(google.visualization.arrayToDataTable(arr));
   });
-
-  $('#inter').addClass('active');
-  $('#inter').siblings().removeClass('active');
-  $('#gmap').empty();
 };
 
 index.takeAction = function() {
+  $('#topLayerText').show();
   $('.container.textOver').hide();
   $('.container.takeActionModal').fadeIn();
   $('.overlay').fadeIn(1000);
-  $('#topLayerText').show();
   $('#takeAction').addClass('active');
   $('#takeAction').siblings().removeClass('active');
 };
@@ -64,21 +75,10 @@ index.takeAction = function() {
 $(function() {
   index.gMap = new GoogleMap();
   index.iMap = new IntlMap();
-  $('#continue').on('click', function(event){
-    event.preventDefault();
-    $('.container.textOver').hide();
-    $('.overlay').fadeOut(1000);
-    $('#US').addClass('active');
-  });
-  $('div.overlay').on('click', function(event){
-    event.preventDefault();
-    $('#topLayerText').hide();
-    $('.overlay').fadeOut(1000);
-    // $('#US').addClass('active');
-  });
-  $('#returnToMap').on('click', function(event){
-    event.preventDefault();
-    $('.container.takeActionModal').hide();
-    $('.overlay').fadeOut(1000);
-  });
+
+  $('#continue').on('click', index.removeText);
+
+  $('div.overlay').on('click', index.removeText);
+
+  $('#returnToMap').on('click', index.removeText);
 });
