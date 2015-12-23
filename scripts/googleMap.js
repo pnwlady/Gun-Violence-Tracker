@@ -2,10 +2,7 @@
 var prev = false;
 
 GoogleMap = function() {
-  this.model();
-  this.view();
-  this.controller();
-
+  GoogleMap.initMap();
 };
 
 GoogleMap.prototype.model = function() {
@@ -13,11 +10,15 @@ GoogleMap.prototype.model = function() {
 };
 
 GoogleMap.prototype.view = function() {
-  google.maps.event.addDomListener(window, 'load', GoogleMap.initMap);
+
 };
 
 GoogleMap.prototype.controller = function() {
 
+};
+
+GoogleMap.prototype.render = function() {
+  GoogleMap.initMap();
 };
 
 GoogleMap.initMap = function() {
@@ -26,6 +27,7 @@ GoogleMap.initMap = function() {
   var mapOptions = {
     center: coordinate,
     zoom: 4,
+    minZoom: 4,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   var dataURL = 'data/gunViolenceArchive.json';
@@ -39,7 +41,7 @@ GoogleMap.initMap = function() {
       markerJSON = data;
       loadMarker = true;
     });
-  this.map = new google.maps.Map(document.getElementById('map'),mapOptions);
+  var map = new google.maps.Map(document.getElementById('gmap'),mapOptions);
   var markerCounter = 0;
   var geocoder = new google.maps.Geocoder();
   setInterval(function() {
@@ -59,7 +61,7 @@ GoogleMap.initMap = function() {
             title: marker['Incident Date']
           });
 
-          GoogleMap.attachInfo(mapMarker, marker);
+          GoogleMap.attachInfo(mapMarker, marker, map);
           markerCounter++;
           console.log(markerCounter);
           loadMarker = true;
@@ -77,7 +79,7 @@ GoogleMap.initMap = function() {
   },1000);
 };
 
-GoogleMap.attachInfo = function(marker, info) {
+GoogleMap.attachInfo = function(marker, info, map) {
   var infoWindow = new google.maps.InfoWindow({
     content:
       '<p>' + info['Incident Date'] + '</p><p>Killed: ' +
@@ -87,7 +89,7 @@ GoogleMap.attachInfo = function(marker, info) {
   marker.addListener('click', function() {
     if(prev) prev.close();
     prev = infoWindow;
-    infoWindow.open(this.map, marker);
+    infoWindow.open(map, marker);
     this.pano = new google.maps.StreetViewPanorama($('#pano')[0], {position: marker.position});
   });
 };
