@@ -13,9 +13,13 @@ index.googleMap = function() {
   $('.container.textOver').hide();
   $('.container.takeActionModal').hide();
   $('.overlay').fadeOut(1000);
+
+  $('#imap').hide();
+
   $('#US').addClass('active');
   $('#US').siblings().removeClass('active');
   $('#imap').empty();
+
   if(index.gMap) {
     index.gMap.render();
   } else {
@@ -27,6 +31,22 @@ index.intlMap = function() {
   $('.container.textOver').hide();
   $('.container.takeActionModal').hide();
   $('.overlay').fadeOut(1000);
+  $('#gmap').hide();
+
+  $.getJSON('data/internationalData.json', function(data) {
+    var arr = [['ISO code', '% of homicides by firearm']];
+
+    data.forEach(function(element) {
+      if(element['% of homicides by firearm'] != 'null') {
+        arr.push([{v:element['ISO code'], f:element['Country/Territory']}, Number(element['% of homicides by firearm'])]);
+      } else {
+        arr.push([{v:element['ISO code'], f:element['Country/Territory']}, undefined]);
+      }
+    });
+
+    index.iMap.render(google.visualization.arrayToDataTable(arr));
+  });
+
   $('#inter').addClass('active');
   $('#inter').siblings().removeClass('active');
   $('#gmap').empty();
@@ -43,6 +63,7 @@ index.takeAction = function() {
 
 $(function() {
   index.gMap = new GoogleMap();
+  index.iMap = new IntlMap();
   $('#continue').on('click', function(event){
     event.preventDefault();
     $('.container.textOver').hide();
