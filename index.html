@@ -7,27 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9" />
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Gun Violence Tracker</title>
-
-<<<<<<< HEAD
-    <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css' />
-    <link rel='stylesheet' href='/vendor/styles/bootstrap/css/bootstrap.css' type='text/css' />
-    <link rel='stylesheet' href='/vendor/styles/jQueryRangeSlider/classic-min.css' type='text/css' />
-    <!-- <link rel='stylesheet' href='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.css' type='text/css'> -->
-    <link rel='stylesheet' href='/Styles/base.css' />
-    <link rel='stylesheet' href='/Styles/layout.css' />
-    <link rel='stylesheet' href='/Styles/module.css' />
-    <link rel='stylesheet' href='/Styles/state.css' />
-    <link rel='stylesheet' href='/Styles/theme.css' />
-=======
     <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css'/>
     <link rel='stylesheet' href='/vendor/styles/bootstrap/css/bootstrap.css' type='text/css'>
+    <link rel='stylesheet' href='/vendor/styles/jQueryRangeSlider/classic-min.css' type='text/css' />
     <link rel='stylesheet' href='/Styles/base.css' type='text/css'>
     <link rel='stylesheet' href='/Styles/layout.css' type='text/css'>
     <link rel='stylesheet' href='/Styles/module.css' type='text/css'>
     <link rel='stylesheet' href='/Styles/state.css' type='text/css'>
     <link rel='stylesheet' href='/Styles/theme.css' type='text/css'>
->>>>>>> origin/staging
-
     <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
@@ -88,17 +75,6 @@
   		</div><!-- //row -->
   	</div> <!-- //container -->
 
-<<<<<<< HEAD
-    <div id='united_states_map'></div>
-    <div id='united_states_map_filters'>
-      <div id='date_range_slider'></div>
-      <div id='united_states_map_location_filter'>
-        <input id="united_states_map_location_input" type="text" name="location" placeholder="Location Search">
-        <div id="united_states_map_location_help">Press "Enter" or "Return" to search.</div>
-      </div>
-    </div>
-    <div id='international_map'></div>
-=======
     <div class="container takeActionModal" hidden>
   		<div class="row">
   			<div class="col-md-6 col-md-offset-3 panel panel-default">
@@ -112,13 +88,19 @@
   		</div><!-- //row -->
   	</div> <!-- //container -->
 </div>
-    <div id='gmap'></div>
+    <div id='united_states_map'></div>
+    <div id='united_states_map_filters'>
+      <div id='date_range_slider'></div>
+      <div id='united_states_map_location_filter'>
+        <input id="united_states_map_location_input" type="text" name="location" placeholder="Location Search">
+        <div id="united_states_map_location_help">Press "Enter" or "Return" to search.</div>
+      </div>
+    </div>
+    <div id='imap'></div>
     <div class='intlMapToggle'>
       <p id="toggleText"></p>
       <button class="btn btn-primary-outline" onClick='index.iMapChange()'>Toggle Filter</button>
     </div>
-    <div id='imap'></div>
->>>>>>> origin/staging
 
     <script src='/vendor/styles/bootstrap/js/bootstrap.js'></script>
     <script src='/scripts/googleMap.js'></script>

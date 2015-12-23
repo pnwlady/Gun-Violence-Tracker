@@ -1,9 +1,9 @@
 var index = {};
-localStorage.setItem('currentMap', '#gmap');
+localStorage.setItem('currentMap', '#united_states_map');
 
 index.chooseActiveMap = function(){
   var currentMap = localStorage.getItem('currentMap');
-  if(currentMap === '#gmap'){
+  if(currentMap === '#united_states_map'){
     $('#US').addClass('active').siblings().removeClass('active');
   }
   else {
@@ -25,31 +25,15 @@ index.modal = function() {
   $('.overlay').fadeIn(1000);
 };
 
-<<<<<<< HEAD
-index.unitedStatesMap = function() {
-  $('#international_map').hide();
-  $('#united_states_map').show();
-  $('#united_states_map_filters').show();
-};
-index.internationalMap = function() {
-  $('#international_map').show();
-  $('#united_states_map').hide();
-  $('#united_states_map_filters').hide();
-=======
 index.googleMap = function() {
-  localStorage.setItem('currentMap', '#gmap');
+  localStorage.setItem('currentMap', '#united_states_map');
   $('#topLayerText').hide();
   $('#imap').hide();
   $('.intlMapToggle').hide();
-  $('#gmap').show();
+  $('#united_states_map').show();
+  $('#united_states_map_filters').show();
   $('.overlay').fadeOut(1000);
   index.chooseActiveMap();
-
-  if(index.gMap) {
-    index.gMap.render();
-  } else {
-    index.gMap = new GoogleMap();
-  }
 };
 
 index.iMapChange = function() {
@@ -70,7 +54,8 @@ index.iMapChange = function() {
 index.intlMap = function() {
   localStorage.setItem('currentMap', '#imap');
   $('#topLayerText').hide();
-  $('#gmap').hide();
+  $('#united_states_map').hide();
+  $('#united_states_map_filters').hide();
   $('#imap').show();
   $('.intlMapToggle').show();
   $('.overlay').fadeOut(1000);
@@ -86,33 +71,22 @@ index.intlMap = function() {
 
     index.iMap.render(google.visualization.arrayToDataTable(arr));
   });
->>>>>>> origin/staging
 };
 index.takeAction = function() {
-<<<<<<< HEAD
   $('#takeActionModal').modal('show');
-  $('#international_map').hide();
-  $('#united_states_map').hide();
-  $('#united_states_map_filters').hide();
-=======
   $('#topLayerText').show();
   $('.container.textOver').hide();
   $('.container.takeActionModal').fadeIn();
   $('.overlay').fadeIn(1000);
   $('#takeAction').addClass('active');
   $('#takeAction').siblings().removeClass('active');
->>>>>>> origin/staging
+  $('#international_map').hide();
+  $('#united_states_map').hide();
+  $('#united_states_map_filters').hide();
 };
 $(function() {
-<<<<<<< HEAD
+
   index.unitedStatesGoogleMap = new GoogleMap('united_states_map','../data/gunViolenceArchive.json');
-  $('#continue').on('click', function(event){
-    event.preventDefault;
-    $('.container.textOver').hide();
-    $('.overlay').fadeOut(1000);
-  });
-=======
-  index.gMap = new GoogleMap();
   index.iMap = new IntlMap();
 
   $('.intlMapToggle').hide();
@@ -122,5 +96,4 @@ $(function() {
   $('div.overlay').on('click', index.removeText);
 
   $('#returnToMap').on('click', index.removeText);
->>>>>>> origin/staging
 });
