@@ -9,7 +9,6 @@
 
     <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css'/>
     <link rel='stylesheet' href='/vendor/styles/bootstrap/css/bootstrap.css' type='text/css'>
-    <!-- <link rel='stylesheet' href='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.css' type='text/css'> -->
     <link rel='stylesheet' href='/styles/base.css'>
     <link rel='stylesheet' href='/styles/layout.css'>
     <link rel='stylesheet' href='/styles/module.css'>
@@ -81,12 +80,13 @@
   	</div> <!-- //container -->
 </div>
     <div id='gmap'></div>
+    <div class='intlMapToggle'>
+      <p id="toggleText"></p>
+      <button class="btn btn-primary-outline" onClick='index.iMapChange()'>Toggle Filter</button>
+    </div>
     <div id='imap'></div>
 
-    <!-- <script src='/vendor/webDB.js'></script> -->
     <script src='/vendor/styles/bootstrap/js/bootstrap.js'></script>
-    <!-- <script src='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.js'></script> -->
-    <!-- <script src='/scripts/googleAPIKey.js'></script> -->
     <script src='/scripts/googleMap.js'></script>
     <script src='/scripts/intlMap.js'></script>
     <script src='/scripts/index.js'></script>
