@@ -22,7 +22,7 @@
   text-align: center;
 }
 
-body { padding-top: 70px; }
+body { padding-top: 120px; }
 
 .overlay{
   width: 100%;
@@ -34,6 +34,40 @@ body { padding-top: 70px; }
   background-color: #0E0C15;
   opacity: .8;
 }
+.container-fluid{
+  height: 65px;
+  padding-top: 20px;
+  padding-left: 25px;
+  padding-bottom: 0px;
+}
 .container.takeActionModal{
   display: none;
+}
+.navbar-brand{
+  font-size: 28px;
+}
+
+.navbar-header{
+  opacity: .8;
+}
+
+.uniformLinks{
+  font-size: 18px;
+}
+
+#dataFrom{
+  text-align: center;
+}
+#returnToMap{
+  float: right;
+  padding: 5px;
+}
+#continue{
+  float: right;
+  padding: 5px;
+}
+@media (min-width: 768px){
+.navbar-nav > li {
+    float: left;
+    margin-left: 5em;
 }
