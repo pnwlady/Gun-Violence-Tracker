@@ -43,14 +43,15 @@
 
         <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
           <ul class='nav navbar-nav'>
-            <li class='active'><a href='/us'>United States <span class='sr-only'>(current)</span></a></li>
-            <li class='uniformLinks'><a href='/intl'>International</a></li>
-            <li class='uniformLinks'><a href='javascript:void(0);' onClick='index.takeAction()'>Take Action</a></li>
+            <li class='uniformLinks' id='US'><a href='/us'>United States <span class='sr-only'>(current)</span></a></li>
+            <li class='uniformLinks' id='inter'><a href='/intl'>International</a></li>
+            <li class='uniformLinks' id='takeAction'><a href='javascript:void(0);' onClick='index.takeAction()'>Take Action</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 
+    <div id='topLayerText'>
     <div class="container textOver">
   		<div class="row">
   			<div class="col-md-6 col-md-offset-3 panel panel-default">
@@ -61,7 +62,7 @@
             <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.
                 Maecenas mattis. Sed convallis tristique sem.
             </p>
-    				<a id='continue' href='javascript:void(0);'>Continue</a>
+    				<a id='continue' href='javascript:void(0);'>Continue to Maps</a>
   			</div><!-- //main content -->
   		</div><!-- //row -->
   	</div> <!-- //container -->
@@ -70,16 +71,15 @@
   		<div class="row">
   			<div class="col-md-6 col-md-offset-3 panel panel-default">
 		      <h1 class="margin-base-vertical">Additional Resources</h1>
-            <p id='dataFrom'>Data on this site from:</p>
-              <ul>
-                <li><a href='http://www.theguardian.com/news/datablog/2013/sep/17/gun-crime-statistics-by-us-state'>The Guardian</a></li>
-                <li><a href='http://www.gunviolencearchive.org/reports'>GunViolenceArchive.org</a></li>
-              </ul>
+            <p id='dataFrom'>Data on this site from:<br>
+              <a href='http://www.theguardian.com/news/datablog/2013/sep/17/gun-crime-statistics-by-us-state'>The Guardian</a><br>
+              <a href='http://www.gunviolencearchive.org/reports'>GunViolenceArchive.org</a>
+            </p>
             <a id='returnToMap' href='javascript:void(0);'>Return to Map</a>
   			</div><!-- //main content -->
   		</div><!-- //row -->
   	</div> <!-- //container -->
-
+</div>
     <div id='gmap'></div>
     <div id='imap'></div>
 
