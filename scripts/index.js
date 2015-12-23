@@ -40,6 +40,8 @@ index.googleMap = function() {
   }
 };
 
+
+
 index.intlMap = function() {
   localStorage.setItem('currentMap', '#imap');
   $('#topLayerText').hide();
@@ -48,15 +50,17 @@ index.intlMap = function() {
   $('.overlay').fadeOut(1000);
   index.chooseActiveMap();
 
-  $.getJSON('data/internationalData.json', function(data) {
-    var arr = [['ISO code', '% of homicides by firearm']];
+  $.getJSON('data/intlData.json', function(data) {
+    var arr = [['location_name', 'mean']];
 
     data.forEach(function(element) {
-      if(element['% of homicides by firearm'] != 'null') {
-        arr.push([{v:element['ISO code'], f:element['Country/Territory']}, Number(element['% of homicides by firearm'])]);
-      } else {
-        arr.push([{v:element['ISO code'], f:element['Country/Territory']}, undefined]);
-      }
+      // if(element['location_name'] != 'null') {
+      //   arr.push([{v:element['ISO code'], f:element['Country/Territory']}, Number(element['% of homicides by firearm'])]);
+      // } else {
+      //   arr.push([{v:element['ISO code'], f:element['Country/Territory']}, undefined]);
+      // }
+      if(element['unit'] == 'rate per 100,000')
+        arr.push([element['location_name'], Number(element['mean'])]);
     });
 
     index.iMap.render(google.visualization.arrayToDataTable(arr));

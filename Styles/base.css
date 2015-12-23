@@ -52,6 +52,17 @@ body { padding-top: 120px; }
 .container.takeActionModal{
   display: none;
 }
+
+.intlMapToggle {
+  display: block;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 12;
+}
+
 .navbar-brand{
   font-size: 28px;
 }
