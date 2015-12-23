@@ -1,10 +1,4 @@
-{
- "meta": {
-  "limit": 100,
-  "offset": 0,
-  "total_count": 12373
- },
- "objects": [
+var contactInfoArray = [
   {
    "bioguideid": "A000069",
    "birthday": "1924-09-11",
@@ -2005,5 +1999,4 @@
    "twitterid": "RonWyden",
    "youtubeid": "senronwyden"
   }
- ]
-}
+ ];

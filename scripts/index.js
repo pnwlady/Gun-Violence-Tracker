@@ -62,8 +62,8 @@ index.takeAction = function() {
 };
 
 $(function() {
-  index.gMap = new GoogleMap();
-  index.iMap = new IntlMap();
+  // index.gMap = new GoogleMap();
+  // index.iMap = new IntlMap();
   $('#continue').on('click', function(event){
     event.preventDefault();
     $('.container.textOver').hide();
