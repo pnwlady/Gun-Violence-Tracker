@@ -23,6 +23,21 @@ index.intlMap = function() {
   $('.container.takeActionModal').hide();
   $('.overlay').fadeOut(1000);
   $('#gmap').empty();
+
+  $.getJSON('data/internationalData.json', function(data) {
+    var arr = [['ISO code', 'Average firearms per 100 people']];
+
+    data.forEach(function(element) {
+      if(element['Average firearms per 100 people'] != 'null') {
+        arr.push([element['ISO code'], Number(element['Average firearms per 100 people'])]);
+      } else {
+        arr.push([element['ISO code'], undefined]);
+      }
+    });
+
+    index.iMap.render(google.visualization.arrayToDataTable(arr));
+  });
+
 };
 
 index.takeAction = function() {
@@ -33,6 +48,7 @@ index.takeAction = function() {
 
 $(function() {
   index.gMap = new GoogleMap();
+  index.iMap = new IntlMap();
   $('#continue').on('click', function(event){
     event.preventDefault();
     $('.container.textOver').hide();

@@ -7,6 +7,15 @@
   z-index: -5000;
 }
 
+#imap {
+  width: 99%;
+  height: 99%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -4500;
+}
+
 #pano {
   width: 640px;
   height: 480px;
