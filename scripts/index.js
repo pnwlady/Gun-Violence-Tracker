@@ -5,30 +5,27 @@ index.modal = function() {
   $('.overlay').fadeIn(1000);
 };
 
-index.googleMap = function() {
-  $('#imap').empty();
-  if(index.gMap) {
-    index.gMap.render();
-  } else {
-    index.gMap = new GoogleMap();
-  }
+index.unitedStatesMap = function() {
+  $('#international_map').hide();
+  $('#united_states_map').show();
+  $('#united_states_map_filters').show();
 };
-
-index.intlMap = function() {
-  $('#gmap').empty();
+index.internationalMap = function() {
+  $('#international_map').show();
+  $('#united_states_map').hide();
+  $('#united_states_map_filters').hide();
 };
-
 index.takeAction = function() {
   $('#takeActionModal').modal('show');
+  $('#international_map').hide();
+  $('#united_states_map').hide();
+  $('#united_states_map_filters').hide();
 };
-
 $(function() {
-  index.gMap = new GoogleMap();
+  index.unitedStatesGoogleMap = new GoogleMap('united_states_map','../data/gunViolenceArchive.json');
   $('#continue').on('click', function(event){
-    event.preventDefault();
+    event.preventDefault;
     $('.container.textOver').hide();
     $('.overlay').fadeOut(1000);
   });
-
-
 });

@@ -1,4 +1,10 @@
-#gmap {
+a {
+  outline: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+}
+#united_states_map {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -7,9 +13,9 @@
   z-index: -5000;
 }
 
-#pano {
-  width: 640px;
-  height: 480px;
+#street-view-panorama {
+  width: 250px;
+  height: 200px;
 }
 
 .panel {
@@ -21,8 +27,6 @@
 	margin: 40px 0;
   text-align: center;
 }
-
-body { padding-top: 70px; }
 
 .overlay{
   width: 100%;

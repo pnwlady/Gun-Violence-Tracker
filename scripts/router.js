@@ -1,4 +1,4 @@
-page('/us', index.googleMap);
-page('/intl', index.intlMap);
+page('/us', index.unitedStatesMap);
+page('/intl', index.internationalMap);
 
 page.start();
