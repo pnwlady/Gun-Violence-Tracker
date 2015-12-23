@@ -1,5 +1,6 @@
 # Gun-Violence-Tracker
 Mapping gun violence
+
 Authors: Heidi Laursen, James Mason, Maria Romero, Kenny Suh
 
 ## Problem Domain \& Proposed Solution
