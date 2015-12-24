@@ -9,21 +9,18 @@
 
     <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css'/>
     <link rel='stylesheet' href='/vendor/styles/bootstrap/css/bootstrap.css' type='text/css'>
-    <!-- <link rel='stylesheet' href='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.css' type='text/css'> -->
+    <link rel='stylesheet' href='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.css' type='text/css'>
     <link rel='stylesheet' href='/styles/base.css'>
     <link rel='stylesheet' href='/styles/layout.css'>
     <link rel='stylesheet' href='/styles/module.css'>
     <link rel='stylesheet' href='/styles/state.css'>
     <link rel='stylesheet' href='/styles/theme.css'>
+    <link rel='stylesheet' href='/Styles/base.css' type='text/css'>
 
     <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
     <script src='https://maps.googleapis.com/maps/api/js'></script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load('visualization', '1.0', {'packages':['geochart']});
-    </script>
     <script src='https://cdn.rawgit.com/visionmedia/page.js/master/page.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
+
   </head>
   <body>
 
@@ -38,64 +35,55 @@
             <span class='icon-bar'></span>
             <span class='icon-bar'></span>
           </button>
-          <a class='navbar-brand' href='javascript:void(0);' onClick='index.modal()'>Gun Violence Tracker</a>
+          <a class='navbar-brand' href='#'>Gun Violence Tracker</a>
         </div>
 
         <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
           <ul class='nav navbar-nav'>
-            <li class='uniformLinks' id='US'><a href='/us'>United States <span class='sr-only'>(current)</span></a></li>
-            <li class='uniformLinks' id='inter'><a href='/intl'>International</a></li>
-            <li class='uniformLinks' id='takeAction'><a href='javascript:void(0);' onClick='index.takeAction()'>Take Action</a></li>
+            <li class='active'><a href='#'>United States <span class='sr-only'>(current)</span></a></li>
+            <li class='uniformLinks'><a href='#'>International</a></li>
+            <li class='uniformLinks'><a href='#'>Take Action</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div id='topLayerText'>
     <div class="container textOver">
   		<div class="row">
   			<div class="col-md-6 col-md-offset-3 panel panel-default">
+
 		      <h1 class="margin-base-vertical">Gun Violence Tracker</h1>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-                Praesent libero. Sed cursus ante dapibus diam.
+                Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+                elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed
+                augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
             </p>
+
             <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.
-                Maecenas mattis. Sed convallis tristique sem.
+                Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas
+                porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa.
+                Fusce ac turpis quis ligula lacinia aliquet.
             </p>
-    				<a id='continue' href='javascript:void(0);'>Continue to Maps</a>
+
+    				<a id='continue' href='#'>Continue</a>
+
   			</div><!-- //main content -->
   		</div><!-- //row -->
   	</div> <!-- //container -->
 
-    <div class="container takeActionModal">
-  		<div class="row">
-  			<div class="col-md-6 col-md-offset-3 panel panel-default">
-		      <h1 class="margin-base-vertical">Additional Resources</h1>
-            <p id='dataFrom'>Data on this site from:<br>
-              <a href='http://www.theguardian.com/news/datablog/2013/sep/17/gun-crime-statistics-by-us-state'>The Guardian</a><br>
-              <a href='http://www.gunviolencearchive.org/reports'>GunViolenceArchive.org</a>
-            </p>
-            <a id='returnToMap' href='javascript:void(0);'>Return to Map</a>
-  			</div><!-- //main content -->
-  		</div><!-- //row -->
-  	</div> <!-- //container -->
-</div>
-    <div id='gmap'></div>
-    <div id='imap'></div>
+    <select id="filterByState" class="state">Find your congress people</div>
+      <!-- add to css for .state display: block, width: 95%; background-color: white; font-size: 14px; -->
+      <option id="state" value="Select by State"></option>
+      <option value="#"></option>
+
+    <div id='map'></div>
 
     <!-- <script src='/vendor/webDB.js'></script> -->
     <script src='/vendor/styles/bootstrap/js/bootstrap.js'></script>
-    <!-- <script src='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.js'></script> -->
+    <script src='/vendor/styles/bootstrap-lightbox/bootstrap-lightbox.js'></script>
     <!-- <script src='/scripts/googleAPIKey.js'></script> -->
     <script src='/scripts/googleMap.js'></script>
-    <script src='/scripts/intlMap.js'></script>
-    <script src="/vendor/html5sql.js"></script>
-    <script src="/vendor/webDB.js"></script>
-    <!-- <script src="/data/congress.json"></script>
-    <script src="/data/states.json"></script>
-    <script src="/data/cleancongress.json"></script> -->
-    <script src='/scripts/congress.js'></script>
-    <script src='/scripts/index.js'></script>
-    <script src='/scripts/router.js'></script>
+    <script src='/scripts/aboutTest.js'></script>
   </body>
 </html>
