@@ -1,4 +1,4 @@
-var abbreviationArray = [
+[
     {
         "name": "Alabama",
         "abbreviation": "AL"
@@ -235,4 +235,4 @@ var abbreviationArray = [
         "name": "Wyoming",
         "abbreviation": "WY"
     }
-];
+]

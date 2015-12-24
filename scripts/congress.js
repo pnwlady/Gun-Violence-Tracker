@@ -1,33 +1,45 @@
-contactInfo = [];
+var cleanData = {};
+cleanData.contactInfo = [];
+cleanData.state = [];
 
 var filter = function (stateAbbrv) {
   //to string or not to string?
   var abbreviation = stateAbbrv;
   var searchRegex = new RegExp(abbreviation);
-  contactInfoArray.forEach(function(cV, index, ciaArray) {
-    var resultArray = (ciaArray[index].sortname).match(searchRegex);
+  cleanData.contactInfo.forEach(function(cV, index, cdArray) {
+    var resultArray = (cdArray[index].sortname).match(searchRegex);
     if (resultArray) {
-      ciaArray[index].sortname = stateAbbrv;
+      cdArray[index].sortname = stateAbbrv;
     }
   });
 };
 
-abbreviationArray.forEach(function(currentValue, index, aaArray) {
-  var stateName = aaArray[index].abbreviation;
-  // console.log("this is statename " + stateName);
-  filter(stateName);
-});
+var replaceState = function() {
+  cleanData.state.forEach(function(currentValue, index, cdsArray) {
+    var stateName = cdsArray[index].abbreviation;
+    // console.log("this is statename " + stateName);
+    filter(stateName);
+  });
+};
 
-// console.log(contactInfoArray);
-// 
-// $.getJson('data/congress.json', cleanCongress);
+var getState = function () {
+  $.getJSON('data/states.json', function (data) {
+    cleanData.state = data;
+    replaceState();
+    console.log(cleanData.state);
+    console.log(cleanData.contactInfo);
+  });
+};
 
-// cleanCongress = function (data) {
+$.getJSON('data/congress.json', function (data) {
+  cleanData.contactInfo = data;
+}).done(getState);
 
-}
-//
-//
-//
+
+
+
+
+
 // $.getJSON("data/congress.json", function(data, message, xhr) {
 //   var items = [];
 // })
