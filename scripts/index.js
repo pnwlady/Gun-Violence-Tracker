@@ -85,6 +85,25 @@ index.takeAction = function() {
   $('#united_states_map_filters').hide();
 };
 $(function() {
+  index.gMap = new GoogleMap();
+  index.iMap = new IntlMap();
+  $('#continue').on('click', function(event){
+    event.preventDefault();
+    $('.container.textOver').hide();
+    $('.overlay').fadeOut(1000);
+    $('#US').addClass('active');
+  });
+  $('div.overlay').on('click', function(event){
+    event.preventDefault();
+    $('#topLayerText').hide();
+    $('.overlay').fadeOut(1000);
+    // $('#US').addClass('active');
+  });
+  $('#returnToMap').on('click', function(event){
+    event.preventDefault();
+    $('.container.takeActionModal').hide();
+    $('.overlay').fadeOut(1000);
+  });
 
   index.unitedStatesGoogleMap = new GoogleMap('united_states_map','../data/gunViolenceArchive.json');
   index.iMap = new IntlMap();
@@ -96,4 +115,5 @@ $(function() {
   $('div.overlay').on('click', index.removeText);
 
   $('#returnToMap').on('click', index.removeText);
+>>>>>>> origin/staging
 });
