@@ -82,12 +82,3 @@ $.getJSON('data/congress.json', function (data) {
 //   })
 // }
 //
-//
-//
-//   $.getJSON("data/states.json", function(data, message, xhr) {
-//     states.data = data;
-//   })
-//     .done(function (callback) {
-//       callback
-//     }
-// };
