@@ -314,7 +314,7 @@ GoogleMap.prototype.setupFilterActions = function(map) {
       var value = $('#united_states_map_location_input').val();
       if (value !== '') {
         var urlAddress = value.replace(/ /g,'+');
-        $.ajax({url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+urlAddress+'&key=AIzaSyB1KIj0tt4j-o4BIhayALx19omN1dJJm7E'}).done(function(data) {
+        $.ajax({url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+urlAddress+'&key='+googleAPIKey}).done(function(data) {
           if (data.status !== 'ZERO_RESULTS') {
             var latitude = data.results[0].geometry.location.lat;
             var longitude = data.results[0].geometry.location.lng;
