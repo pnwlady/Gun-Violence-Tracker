@@ -1,69 +1,92 @@
 var index = {};
+localStorage.setItem('currentMap', '#united_states_map');
 
-index.modal = function() {
-  $('.container.takeActionModal').hide();
-  $('.container.textOver').fadeIn();
-  $('.overlay').fadeIn(1000);
-  $('#topLayerText').show();
-  // $('#US').addClass('active');
-  // $('#US').siblings().removeClass('active');
-};
-
-index.googleMap = function() {
-  $('.container.textOver').hide();
-  $('.container.takeActionModal').hide();
-  $('.overlay').fadeOut(1000);
-
-  $('#imap').hide();
-
-  $('#US').addClass('active');
-  $('#US').siblings().removeClass('active');
-  $('#imap').empty();
-
-  if(index.gMap) {
-    index.gMap.render();
-  } else {
-    index.gMap = new GoogleMap();
+index.chooseActiveMap = function(){
+  var currentMap = localStorage.getItem('currentMap');
+  if(currentMap === '#united_states_map'){
+    $('#US').addClass('active').siblings().removeClass('active');
+  }
+  else {
+    $('#inter').addClass('active').siblings().removeClass('active');
   }
 };
 
-index.intlMap = function() {
-  $('.container.textOver').hide();
-  $('.container.takeActionModal').hide();
+index.removeText = function(event) {
+  event.preventDefault();
+  $('#topLayerText').hide();
   $('.overlay').fadeOut(1000);
-  $('#gmap').hide();
+  index.chooseActiveMap();
+};
 
-  $.getJSON('data/internationalData.json', function(data) {
-    var arr = [['ISO code', '% of homicides by firearm']];
+index.modal = function() {
+  $('#topLayerText').show();
+  $('.container.takeActionModal').hide();
+  $('.container.textOver').fadeIn();
+  $('.overlay').fadeIn(1000);
+};
+
+index.googleMap = function() {
+  localStorage.setItem('currentMap', '#united_states_map');
+  $('#topLayerText').hide();
+  $('#imap').hide();
+  $('.intlMapToggle').hide();
+  $('#united_states_map').show();
+  $('#united_states_map_filters').show();
+  $('.overlay').fadeOut(1000);
+  index.chooseActiveMap();
+};
+
+index.iMapChange = function() {
+  index.iMap.changeFilter();
+
+  $.getJSON('data/intlData.json', function(data) {
+    var arr = [['location_name', 'mean']];
 
     data.forEach(function(element) {
-      if(element['% of homicides by firearm'] != 'null') {
-        arr.push([{v:element['ISO code'], f:element['Country/Territory']}, Number(element['% of homicides by firearm'])]);
-      } else {
-        arr.push([{v:element['ISO code'], f:element['Country/Territory']}, undefined]);
-      }
+      if(element['unit'] == index.iMap.filters[index.iMap.currentFilter])
+        arr.push([element['location_name'], Number(element['mean'])]);
     });
 
     index.iMap.render(google.visualization.arrayToDataTable(arr));
   });
-
-  $('#inter').addClass('active');
-  $('#inter').siblings().removeClass('active');
-  $('#gmap').empty();
 };
 
+index.intlMap = function() {
+  localStorage.setItem('currentMap', '#imap');
+  $('#topLayerText').hide();
+  $('#united_states_map').hide();
+  $('#united_states_map_filters').hide();
+  $('#imap').show();
+  $('.intlMapToggle').show();
+  $('.overlay').fadeOut(1000);
+  index.chooseActiveMap();
+
+  $.getJSON('data/intlData.json', function(data) {
+    var arr = [['location_name', index.iMap.filters[index.iMap.currentFilter]]];
+
+    data.forEach(function(element) {
+      if(element['unit'] == index.iMap.filters[index.iMap.currentFilter])
+        arr.push([element['location_name'], Number(element['mean'])]);
+    });
+
+    index.iMap.render(google.visualization.arrayToDataTable(arr));
+  });
+};
 index.takeAction = function() {
+  $('#takeActionModal').modal('show');
+  $('#topLayerText').show();
   $('.container.textOver').hide();
   $('.container.takeActionModal').fadeIn();
   $('.overlay').fadeIn(1000);
-  $('#topLayerText').show();
   $('#takeAction').addClass('active');
   $('#takeAction').siblings().removeClass('active');
+  $('#international_map').hide();
+  $('#united_states_map').hide();
+  $('#united_states_map_filters').hide();
 };
-
 $(function() {
-  // index.gMap = new GoogleMap();
-  // index.iMap = new IntlMap();
+  index.gMap = new GoogleMap();
+  index.iMap = new IntlMap();
   $('#continue').on('click', function(event){
     event.preventDefault();
     $('.container.textOver').hide();
@@ -81,4 +104,16 @@ $(function() {
     $('.container.takeActionModal').hide();
     $('.overlay').fadeOut(1000);
   });
+
+  index.unitedStatesGoogleMap = new GoogleMap('united_states_map','../data/gunViolenceArchive.json');
+  index.iMap = new IntlMap();
+
+  $('.intlMapToggle').hide();
+
+  $('#continue').on('click', index.removeText);
+
+  $('div.overlay').on('click', index.removeText);
+
+  $('#returnToMap').on('click', index.removeText);
+>>>>>>> origin/staging
 });

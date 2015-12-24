@@ -1,0 +1,28 @@
+#united_states_map_filters {
+  background-color:#fff;
+  opacity:0.75;
+  position:absolute;
+  bottom:30px;
+  left:10px;
+  width:250px;
+  height:135px;
+  text-align:center;
+  z-index:-4500;
+}
+#united_states_map_location_filter {
+  margin:10px;
+  position:relative;
+  top:45px;
+}
+#united_states_map_location_filter input{
+  padding:5px;
+}
+#united_states_map_location_help {
+  font-size:10px;
+}
+#date_range_slider {
+  position:relative;
+  top:40px;
+  left:38px;
+  width:175px;
+}

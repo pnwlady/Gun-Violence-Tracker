@@ -1,0 +1,15 @@
+{
+  "name": "gun-violence-tracker",
+  "version": "1.0.0",
+  "description": "Words.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Code Fellows Students",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "pushstate-server": "^1.8.1"
+  }
+}

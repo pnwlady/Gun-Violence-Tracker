@@ -28,6 +28,8 @@ var getState = function () {
     replaceState();
     console.log(cleanData.state);
     console.log(cleanData.contactInfo);
+    fillStateAbrreviations();
+    fillContactInfo();
   });
 };
 
@@ -35,6 +37,23 @@ $.getJSON('data/congress.json', function (data) {
   cleanData.contactInfo = data;
 }).done(getState);
 
+function fillStateAbrreviations () {
+  cleanData.state.forEach(function(object) {
+    webDB.execute([{
+      'sql': 'INSERT INTO stateAbbreviations (name, abbreviation) VALUES (?, ?);',
+      'data': [object.name, object.abbreviation],
+    }]);
+  });
+};
+
+function fillContactInfo () {
+  cleanData.contactInfo.forEach(function(object) {
+    webDB.execute([{
+      'sql': 'INSERT INTO congressContact (sortname, firstname, lastname, link) VALUES (?, ?, ?, ?);',
+      'data': [object.sortname, object.firstname, object.lastname, object.link],
+    }]);
+  });
+};
 
 
 

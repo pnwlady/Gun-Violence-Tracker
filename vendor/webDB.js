@@ -38,7 +38,7 @@ webDB.connect = function (database, title, size) {
 
 webDB.setupTables = function () {
   html5sql.process(
-    'CREATE TABLE IF NOT EXISTS stateAbbreviations (id INTEGER PRIMARY KEY, name VARCHAR(255) NOT NULL, abbreviation VARCHAR(255) NOT NULL);',
+    'CREATE TABLE IF NOT EXISTS stateAbbreviations (name VARCHAR(255) NOT NULL, abbreviation VARCHAR(255) NOT NULL);',
     // 'CREATE TABLE IF NOT EXISTS congressContact (id INTEGER PRIMARY KEY, sortname VARCHAR(255) NOT NULL, firstname VARCHAR(255) NOT NULL, lastname VARCHAR(255) NOT NULL, link VARCHA(255) NOT NULL);',
     function() {
       // on success
