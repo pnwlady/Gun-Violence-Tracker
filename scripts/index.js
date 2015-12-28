@@ -81,7 +81,7 @@ $(function() {
     $('.container.takeActionModal').hide();
     $('.overlay').fadeOut(1000);
   });
-  
+
 
   index.unitedStatesGoogleMap = new GoogleMap('united_states_map','../data/gunViolenceArchive.json');
   index.iMap = new IntlMap();
@@ -94,4 +94,15 @@ $(function() {
 
   $('#returnToMap').on('click', index.removeText);
 
+  google.maps.event.addListener(index.unitedStatesGoogleMap.map, 'idle', function() {
+    $('#test').val('http://maps.google.com?ll=' + index.unitedStatesGoogleMap.map.getCenter().lat() + ',' +
+      index.unitedStatesGoogleMap.map.getCenter().lng() + '&z=' + index.unitedStatesGoogleMap.map.getZoom());
+  });
+
+  // $(index.unitedStatesGoogleMap.map).addEventListener('idle', function(event) {
+  //   console.log('wut');
+  //   event.preventDefault();
+  //   $('#test').text('http://maps.google.com?ll=' + index.unitedStatesGoogleMap.map.getCenter().lat() + ',' +
+  //     index.unitedStatesGoogleMap.map.getCenter().lng() + '&z=' + index.unitedStatesGoogleMap.map.getZoom());
+  // });
 });
