@@ -73,6 +73,9 @@ input::-moz-focus-inner {
   margin-top: 120px;
   border: 2px solid #111;
   background: #f5f5f5;
+  bottom:30px;
+  left:10px;
+  text-align:center;
 }
 
 .navbar-brand{
