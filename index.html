@@ -57,8 +57,6 @@
 
     <div class='overlay'></div>
 
-
-
     <div id='topLayerText'>
     <div class="container textOver">
   		<div class="row">
@@ -90,23 +88,9 @@
               <input id='statesTypeahead' class='typeahead' type='text' data-provide='typeahead' autocomplete='false' placeholder='States'>
             </div>
 
-            <div class='dropdown'>
-              <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
-                State
-                <span class='caret'></span>
-              </button>
-              <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
-                <li>State HERE</li>
-                <li role='separator' class='divider'></li>
-                <li><a href='#'>Separated link</a></li>
-              </ul>
-            </div>
+            <a id='findSenatorButton' class='btn btn-sm btn-success' role="button">Find your Senators</a>
 
-
-
-
-
-
+            <div class='senators'></div>
 
             <a id='returnToMap' href='javascript:void(0);'>Return to Map</a>
   			</div><!-- //main content -->
@@ -134,9 +118,6 @@
     <script src='/vendor/html5sql.js'></script>
     <script src='/vendor/webDB.js'></script>
     <script src='/vendor/styles/bootstrap/js/bootstrap3-typeahead.js'></script>
-    <!-- <script src='/data/congress.json'></script>
-    <script src='/data/states.json'></script>
-    <script src='/data/cleancongress.json'></script> -->
     <script src='/scripts/congress.js'></script>
     <script src='/scripts/index.js'></script>
     <script src='/scripts/router.js'></script>
