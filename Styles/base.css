@@ -105,6 +105,9 @@ input::-moz-focus-inner {
   float: right;
   padding: 5px;
 }
+#test {
+  margin: 5px;
+}
 @media (min-width: 768px){
 .navbar-nav > li {
     float: left;
