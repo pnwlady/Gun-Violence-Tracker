@@ -85,7 +85,9 @@ $(function() {
     $('.container.takeActionModal').hide();
     $('.overlay').fadeOut(1000);
   });
-  
+  $('#findSenatorButton').on('click', function(event){
+    getSenator();
+  });
 
   index.unitedStatesGoogleMap = new GoogleMap('united_states_map','../data/gunViolenceArchive.json');
   index.iMap = new IntlMap();
