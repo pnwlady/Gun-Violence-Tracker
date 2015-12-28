@@ -38,17 +38,8 @@ index.googleMap = function() {
 
 index.iMapChange = function() {
   index.iMap.changeFilter();
+  index.iMap.render();
 
-  $.getJSON('data/intlData.json', function(data) {
-    var arr = [['location_name', 'mean']];
-
-    data.forEach(function(element) {
-      if(element['unit'] == index.iMap.filters[index.iMap.currentFilter])
-        arr.push([element['location_name'], Number(element['mean'])]);
-    });
-
-    index.iMap.render(google.visualization.arrayToDataTable(arr));
-  });
 };
 
 index.intlMap = function() {
@@ -60,17 +51,9 @@ index.intlMap = function() {
   $('.intlMapToggle').show();
   $('.overlay').fadeOut(1000);
   index.chooseActiveMap();
+  index.iMap.render();
 
-  $.getJSON('data/intlData.json', function(data) {
-    var arr = [['location_name', index.iMap.filters[index.iMap.currentFilter]]];
 
-    data.forEach(function(element) {
-      if(element['unit'] == index.iMap.filters[index.iMap.currentFilter])
-        arr.push([element['location_name'], Number(element['mean'])]);
-    });
-
-    index.iMap.render(google.visualization.arrayToDataTable(arr));
-  });
 };
 index.takeAction = function() {
   $('#takeActionModal').modal('show');
