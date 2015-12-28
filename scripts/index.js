@@ -85,8 +85,6 @@ index.takeAction = function() {
   $('#united_states_map_filters').hide();
 };
 $(function() {
-  index.gMap = new GoogleMap();
-  index.iMap = new IntlMap();
   $('#continue').on('click', function(event){
     event.preventDefault();
     $('.container.textOver').hide();
@@ -115,5 +113,5 @@ $(function() {
   $('div.overlay').on('click', index.removeText);
 
   $('#returnToMap').on('click', index.removeText);
->>>>>>> origin/staging
+
 });
