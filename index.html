@@ -4,7 +4,7 @@
 
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta http-equiv='X-UA-Compatible' content='IE=9' />
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Gun Violence Tracker</title>
     <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css'/>
@@ -16,17 +16,17 @@
     <link rel='stylesheet' href='/Styles/state.css' type='text/css'>
     <link rel='stylesheet' href='/Styles/theme.css' type='text/css'>
     <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-    <script src="vendor/scripts/jQueryRangeSlider/jquery.mousewheel.min.js"></script>
-    <script src="vendor/scripts/jQueryRangeSlider/jQAllRangeSliders-min.js"></script>
+    <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+	  <script src='http://code.jquery.com/ui/1.10.3/jquery-ui.min.js'></script>
+    <script src='vendor/scripts/jQueryRangeSlider/jquery.mousewheel.min.js'></script>
+    <script src='vendor/scripts/jQueryRangeSlider/jQAllRangeSliders-min.js'></script>
     <script src='https://maps.googleapis.com/maps/api/js'></script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
       google.load('visualization', '1.0', {'packages':['geochart']});
     </script>
     <script src='https://cdn.rawgit.com/visionmedia/page.js/master/page.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js' charset='utf-8'></script>
   </head>
 
   <header>
@@ -60,10 +60,10 @@
 
 
     <div id='topLayerText'>
-    <div class="container textOver">
-  		<div class="row">
-  			<div class="col-md-6 col-md-offset-3 panel panel-default">
-		      <h1 class="margin-base-vertical">Gun Violence Tracker</h1>
+    <div class='container textOver'>
+  		<div class='row'>
+  			<div class='col-md-6 col-md-offset-3 panel panel-default'>
+		      <h1 class='margin-base-vertical'>Gun Violence Tracker</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
                 Praesent libero. Sed cursus ante dapibus diam.
             </p>
@@ -75,14 +75,37 @@
   		</div><!-- //row -->
   	</div> <!-- //container -->
 
-    <div class="container takeActionModal" hidden>
-  		<div class="row">
-  			<div class="col-md-6 col-md-offset-3 panel panel-default">
-		      <h1 class="margin-base-vertical">Additional Resources</h1>
+    <div class='container takeActionModal' hidden>
+  		<div class='row'>
+  			<div class='col-md-6 col-md-offset-3 panel panel-default'>
+		      <h1 class='margin-base-vertical'>Additional Resources</h1>
             <p id='dataFrom'>Data on this site from:<br>
               <a href='http://www.theguardian.com/news/datablog/2013/sep/17/gun-crime-statistics-by-us-state'>The Guardian</a><br>
               <a href='http://www.gunviolencearchive.org/reports'>GunViolenceArchive.org</a>
             </p>
+
+            <div id='stateNamesInput'>
+              <input id='statesTypeahead' class='typeahead' type='text' data-provide='typeahead' autocomplete='false' placeholder='States'>
+            </div>
+
+            <div class='dropdown'>
+              <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
+                State
+                <span class='caret'></span>
+              </button>
+              <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
+                <li>State HERE</li>
+                <li role='separator' class='divider'></li>
+                <li><a href='#'>Separated link</a></li>
+              </ul>
+            </div>
+
+
+
+
+
+
+
             <a id='returnToMap' href='javascript:void(0);'>Return to Map</a>
   			</div><!-- //main content -->
   		</div><!-- //row -->
@@ -92,24 +115,25 @@
     <div id='united_states_map_filters'>
       <div id='date_range_slider'></div>
       <div id='united_states_map_location_filter'>
-        <input id="united_states_map_location_input" type="text" name="location" placeholder="Location Search">
-        <div id="united_states_map_location_help">Press "Enter" or "Return" to search.</div>
+        <input id='united_states_map_location_input' type='text' name='location' placeholder='Location Search'>
+        <div id='united_states_map_location_help'>Press 'Enter' or 'Return' to search.</div>
       </div>
     </div>
     <div id='imap'></div>
     <div class='intlMapToggle'>
-      <p id="toggleText"></p>
-      <button class="btn btn-primary-outline" onClick='index.iMapChange()'>Toggle Filter</button>
+      <p id='toggleText'></p>
+      <button class='btn btn-primary-outline' onClick='index.iMapChange()'>Toggle Filter</button>
     </div>
 
     <script src='/vendor/styles/bootstrap/js/bootstrap.js'></script>
     <script src='/scripts/googleMap.js'></script>
     <script src='/scripts/intlMap.js'></script>
-    <script src="/vendor/html5sql.js"></script>
-    <script src="/vendor/webDB.js"></script>
-    <!-- <script src="/data/congress.json"></script>
-    <script src="/data/states.json"></script>
-    <script src="/data/cleancongress.json"></script> -->
+    <script src='/vendor/html5sql.js'></script>
+    <script src='/vendor/webDB.js'></script>
+    <script src='/vendor/styles/bootstrap/js/bootstrap3-typeahead.js'></script>
+    <!-- <script src='/data/congress.json'></script>
+    <script src='/data/states.json'></script>
+    <script src='/data/cleancongress.json'></script> -->
     <script src='/scripts/congress.js'></script>
     <script src='/scripts/index.js'></script>
     <script src='/scripts/router.js'></script>
