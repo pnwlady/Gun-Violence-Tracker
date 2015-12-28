@@ -14,7 +14,8 @@ GoogleMap.prototype.model = function(elementID,dataUrl) {
   var mapOptions = {
     center: coordinate,
     zoom: 4,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    minZoom: 4
   };
   this.map = new google.maps.Map(document.getElementById(elementID),mapOptions);
   this.dataURL = dataUrl;
