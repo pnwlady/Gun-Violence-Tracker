@@ -73,8 +73,9 @@ var getSenator = function () {
     function(rows) {
       // on success
       var senatorArray = rows;
+      $('.senators').empty();
       senatorArray.forEach(function (cE, index, array){
-        $('.senators').append("<a class='senatorContact' href='" + array[index].link + "' target='_blank'>" + array[index].firstname +" " + array[index].lastname + "</a>");
+        $('.senators').append("<p><a class='senatorContact' href='" + array[index].link + "' target='_blank'>" + array[index].firstname +" " + array[index].lastname + "</a></p>");
       });
     });
 };

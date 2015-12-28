@@ -94,6 +94,26 @@ input::-moz-focus-inner {
   margin-top: 120px;
 }
 
+#stateForm {
+  padding: 6px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+#statesTypeahead {
+  border-radius: 3px;
+  border-style: solid;
+  border-color: white;
+  margin-bottom: 8px;
+}
+
+#senatorAnswer {
+  margin: 4px;
+  padding: 6px;
+  font-family: sans-serif;
+  font-size: 16px;
+
+}
+
 #dataFrom{
   text-align: center;
 }
