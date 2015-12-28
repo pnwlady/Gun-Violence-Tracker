@@ -56,16 +56,12 @@ index.intlMap = function() {
 
 };
 index.takeAction = function() {
-  $('#takeActionModal').modal('show');
   $('#topLayerText').show();
   $('.container.textOver').hide();
   $('.container.takeActionModal').fadeIn();
   $('.overlay').fadeIn(1000);
   $('#takeAction').addClass('active');
   $('#takeAction').siblings().removeClass('active');
-  $('#international_map').hide();
-  $('#united_states_map').hide();
-  $('#united_states_map_filters').hide();
 };
 $(function() {
   $('#continue').on('click', function(event){
