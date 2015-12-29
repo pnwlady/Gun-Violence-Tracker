@@ -1,3 +1,25 @@
 a:hover, a:active, a:focus {
   outline: 0;
 }
+
+@media (min-width: 768px){
+.navbar-nav > li {
+    float: left;
+}
+@media (min-width: 780px){
+  .navbar-nav > li {
+   float: left;
+   margin-left: 5em;
+   margin-left: 1em;
+ }
+}
+@media (min-width: 885px){
+  .navbar-nav > li {
+  margin-left: 3em;
+  }
+}
+@media (min-width: 990px){
+  .navbar-nav > li {
+  margin-left: 5em;
+ }
+}
