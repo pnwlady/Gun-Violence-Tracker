@@ -19,9 +19,7 @@ As a user, I want to be able to see a street view of each gun violence incident 
 
 As a user, I want to be able to see a visualization of the map based on different parameters like year and location.
 
-As a user, I want to be able to retrieve the specific URL of the map view that I currently have on my screen so I can share it with others.
-
-As a user, I want my settings on my map to persist through browser reloads.
+As a developer, I want to be able to persist the user inputs on the US map so that browser reloads/forwards/backwards save the data.
 
 ### Contacting Local Representatives
 As a user, I want to be able to look up and/or contact local representative to my area so that I can inquire about gun violence issues/legislation.
