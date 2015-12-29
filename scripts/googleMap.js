@@ -11,7 +11,7 @@ GoogleMap.prototype.model = function(elementID,dataUrl,parameters) {
   var zoom = 4;
   if (address !== null) {
     var urlAddress = address.replace(/ /g,'+');
-    $.ajax({async: false, url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+urlAddress+'&key='+googleAPIKey}).done(function(data) {
+    $.ajax({async: false, url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+urlAddress}).done(function(data) {
       if (data.status !== 'ZERO_RESULTS') {
         latitude = data.results[0].geometry.location.lat;
         longitude = data.results[0].geometry.location.lng;
@@ -598,7 +598,7 @@ GoogleMap.prototype.setupFilterActions = function(map) {
       var value = $('#united_states_map_location_input').val();
       if (value !== '') {
         var urlAddress = value.replace(/ /g,'+');
-        $.ajax({url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+urlAddress+'&key='+googleAPIKey}).done(function(data) {
+        $.ajax({url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+urlAddress}).done(function(data) {
           if (data.status !== 'ZERO_RESULTS') {
             var latitude = data.results[0].geometry.location.lat;
             var longitude = data.results[0].geometry.location.lng;
@@ -716,7 +716,7 @@ GoogleMap.prototype.refresh = function() {
 GoogleMap.prototype.centerMapOnAddress = function(address) {
   if (address !== '') {
     var urlAddress = address.replace(/ /g,'+');
-    $.ajax({async: false, url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+urlAddress+'&key='+googleAPIKey}).done(function(data) {
+    $.ajax({async: false, url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+urlAddress}).done(function(data) {
       if (data.status !== 'ZERO_RESULTS') {
         var latitude = data.results[0].geometry.location.lat;
         var longitude = data.results[0].geometry.location.lng;
