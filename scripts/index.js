@@ -23,8 +23,13 @@ index.modal = function() {
 };
 index.unitedStatesMap = function() {
   localStorage.setItem('currentMap', '#united_states_map');
+  var baseUrl = window.location.href.substring(0,window.location.href.indexOf('/',9));
+  if (window.location.href !== 'http://localhost:9000/us') {
+    window.location.href = baseUrl + '/us';
+  }
   $('#topLayerText').hide();
   $('#imap').hide();
+  $('#imap2').hide();
   $('.intlMapToggle').hide();
   $('#united_states_map').show();
   $('#united_states_map_filters').show();
@@ -43,6 +48,7 @@ index.unitedStatesSpecificMap = function() {
   localStorage.setItem('currentMap', '#united_states_map');
   $('#topLayerText').hide();
   $('#imap').hide();
+  $('#imap2').hide();
   $('.intlMapToggle').hide();
   $('#united_states_map').show();
   $('#united_states_map_filters').show();
@@ -120,6 +126,11 @@ index.iMapChange = function() {
 };
 index.internationalMap = function() {
   localStorage.setItem('currentMap', '#imap');
+  index.iMap = new IntlMap();
+  var baseUrl = window.location.href.substring(0,window.location.href.indexOf('/',9));
+  if (window.location.href !== 'http://localhost:9000/intl') {
+    window.location.href = baseUrl + '/intl';
+  }
   $('#topLayerText').hide();
   $('#united_states_map').hide();
   $('#united_states_map_filters').hide();
@@ -163,9 +174,6 @@ $(function() {
   $('#findSenatorButton').on('click', function(event){
     getSenator();
   });
-  var parameters = [null,null,null];
-  index.unitedStatesGoogleMap = new GoogleMap('united_states_map','../data/gunViolenceArchive.json',parameters);
-  index.iMap = new IntlMap();
   $('#continue').on('click', index.removeText);
   $('div.overlay').on('click', index.removeText);
   $('#returnToMap').on('click', index.removeText);

@@ -587,9 +587,17 @@ GoogleMap.prototype.setupFilterActions = function(map) {
         locationString = ('Location=' + locationString);
       }
       if (locationString !== null) {
-        window.location.href = baseUrl + '/' + locationString + '&' + dateRangeString;
+        if (baseUrl.indexOf('us') > -1) {
+          window.location.href = baseUrl + '/' + locationString + '&' + dateRangeString;
+        } else {
+          window.location.href = baseUrl + '/us/' + locationString + '&' + dateRangeString;
+        }
       } else {
-        window.location.href = baseUrl + '/' + dateRangeString;
+        if (baseUrl.indexOf('us') > -1) {
+          window.location.href = baseUrl + '/' + dateRangeString;
+        } else {
+          window.location.href = baseUrl + '/us/' + dateRangeString;
+        }
       }
     }
   });
@@ -622,9 +630,10 @@ GoogleMap.prototype.setupFilterActions = function(map) {
             var lastSlash = window.location.href.lastIndexOf('/');
             var queryString = '';
             if (lastSlash <= 8) {
+              var baseUrl = window.location.href;
               locationString = urlAddress.replace(/[^a-z0-9+-]+/gi,'');
               locationString = ('Location=' + locationString);
-              window.location.href = baseUrl + locationString;
+              window.location.href = baseUrl + '/us/' + locationString;
             } else if (window.location.href.substring((lastSlash + 1),(lastSlash+3)) === 'us') {
               var baseUrl = window.location.href.substring(0,lastSlash+3);
               queryString = window.location.href.substring((lastSlash + 1),window.location.href.length);
@@ -664,7 +673,7 @@ GoogleMap.prototype.setupFilterActions = function(map) {
                 window.location.href = baseUrl + '/' + locationString;
               }
             } else {
-              var baseUrl = window.location.href.substring(0,lastSlash - 3);
+              var baseUrl = window.location.href.substring(0,lastSlash);
               queryString = window.location.href.substring((lastSlash + 1),window.location.href.length);
               var locationString = '';
               var dateRangeString = '';
@@ -691,15 +700,26 @@ GoogleMap.prototype.setupFilterActions = function(map) {
               } else {
                 dateRangeString = dateRangeString.replace(/[a-z]/gi,'');
               }
+              if (locationString !== null) {
+                locationString = ('Location=' + locationString);
+              }
               locationString = urlAddress.replace(/[^a-z0-9+-]+/gi,'');
               locationString = ('Location=' + locationString);
               if (dateRangeString !== null) {
                 dateRangeString = ('Date-Range=' + dateRangeString);
               }
               if (dateRangeString !== null) {
-                window.location.href = baseUrl + '/us/' + locationString + '&' + dateRangeString;
+                if (baseUrl.indexOf('us') > -1) {
+                  window.location.href = baseUrl + '/' + locationString + '&' + dateRangeString;
+                } else {
+                  window.location.href = baseUrl + '/us/' + locationString + '&' + dateRangeString;
+                }
               } else {
-                window.location.href = baseUrl + '/us/' + locationString;
+                if (baseUrl.indexOf('us') > -1) {
+                  window.location.href = baseUrl + '/' + locationString;
+                } else {
+                  window.location.href = baseUrl + '/us/' + locationString;
+                }
               }
             }
           }
