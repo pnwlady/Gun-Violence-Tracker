@@ -18,13 +18,17 @@
 
 /*Modals*/
 .row {
-  margin-top:130px;
+  margin-top:102px;
 }
 .margin-base-vertical {
-	margin: 40px 0;
+	margin: 20px 0;
 }
 .container.takeActionModal{
   display: none;
+}
+
+.col-md-6.col-md-offset-3.panel.panel-default{
+  font-size: 11px;
 }
 
 /*International Map*/
