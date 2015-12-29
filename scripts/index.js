@@ -116,14 +116,7 @@ index.unitedStatesSpecificMap = function() {
 };
 index.iMapChange = function() {
   index.iMap.changeFilter();
-  $.getJSON('data/intlData.json', function(data) {
-    var arr = [['location_name', 'mean']];
-    data.forEach(function(element) {
-      if(element['unit'] == index.iMap.filters[index.iMap.currentFilter])
-        arr.push([element['location_name'], Number(element['mean'])]);
-    });
-    index.iMap.render(google.visualization.arrayToDataTable(arr));
-  });
+  index.iMap.render();
 };
 index.internationalMap = function() {
   localStorage.setItem('currentMap', '#imap');
@@ -134,17 +127,9 @@ index.internationalMap = function() {
   $('.intlMapToggle').show();
   $('.overlay').fadeOut(1000);
   index.chooseActiveMap();
-  $.getJSON('data/intlData.json', function(data) {
-    var arr = [['location_name', index.iMap.filters[index.iMap.currentFilter]]];
-    data.forEach(function(element) {
-      if(element['unit'] == index.iMap.filters[index.iMap.currentFilter])
-        arr.push([element['location_name'], Number(element['mean'])]);
-    });
-    index.iMap.render(google.visualization.arrayToDataTable(arr));
-  });
+  index.iMap.render();
 };
 index.takeAction = function() {
-  $('#takeActionModal').modal('show');
   $('#topLayerText').show();
   $('.container.textOver').hide();
   $('.container.takeActionModal').fadeIn();
@@ -153,6 +138,32 @@ index.takeAction = function() {
   $('#takeAction').siblings().removeClass('active');
 };
 $(function() {
+  $('#continue').on('click', function(event){
+    event.preventDefault();
+    $('.container.textOver').hide();
+    $('.overlay').fadeOut(1000);
+    $('#US').addClass('active');
+  });
+  $('div.overlay').on('click', function(event){
+    event.preventDefault();
+    $('#topLayerText').hide();
+    $('.overlay').fadeOut(1000);
+    // $('#US').addClass('active');
+  });
+  $('#returnToMap').on('click', function(event){
+    event.preventDefault();
+    $('.container.takeActionModal').hide();
+    $('.overlay').fadeOut(1000);
+  });
+  $('#stateNamesInput').on('keyup', function(event) {
+    if(event.which == 13) {
+      getSenator();
+    };
+  });
+  $('#findSenatorButton').on('click', function(event){
+    getSenator();
+  });
+  index.unitedStatesGoogleMap = new GoogleMap('united_states_map','../data/gunViolenceArchive.json');
   index.iMap = new IntlMap();
   $('#continue').on('click', index.removeText);
   $('div.overlay').on('click', index.removeText);
