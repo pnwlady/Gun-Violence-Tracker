@@ -622,12 +622,10 @@ GoogleMap.prototype.setupFilterActions = function(map) {
             var lastSlash = window.location.href.lastIndexOf('/');
             var queryString = '';
             if (lastSlash <= 8) {
-              alert('0');
               locationString = urlAddress.replace(/[^a-z0-9+-]+/gi,'');
               locationString = ('Location=' + locationString);
               window.location.href = baseUrl + locationString;
             } else if (window.location.href.substring((lastSlash + 1),(lastSlash+3)) === 'us') {
-              alert('1');
               var baseUrl = window.location.href.substring(0,lastSlash+3);
               queryString = window.location.href.substring((lastSlash + 1),window.location.href.length);
               var locationString = '';
@@ -666,7 +664,6 @@ GoogleMap.prototype.setupFilterActions = function(map) {
                 window.location.href = baseUrl + '/' + locationString;
               }
             } else {
-              alert('2');
               var baseUrl = window.location.href.substring(0,lastSlash - 3);
               queryString = window.location.href.substring((lastSlash + 1),window.location.href.length);
               var locationString = '';
@@ -695,7 +692,6 @@ GoogleMap.prototype.setupFilterActions = function(map) {
                 dateRangeString = dateRangeString.replace(/[a-z]/gi,'');
               }
               locationString = urlAddress.replace(/[^a-z0-9+-]+/gi,'');
-              alert('Location: '+locationString);
               locationString = ('Location=' + locationString);
               if (dateRangeString !== null) {
                 dateRangeString = ('Date-Range=' + dateRangeString);
