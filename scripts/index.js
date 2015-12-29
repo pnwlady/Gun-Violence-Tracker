@@ -24,7 +24,7 @@ index.modal = function() {
 index.unitedStatesMap = function() {
   localStorage.setItem('currentMap', '#united_states_map');
   var baseUrl = window.location.href.substring(0,window.location.href.indexOf('/',9));
-  if (window.location.href !== 'http://localhost:9000/us') {
+  if (window.location.href !== 'http://gunviolence.herokuapp.com/us') {
     window.location.href = baseUrl + '/us';
   }
   index.iMap = new IntlMap();
@@ -129,14 +129,13 @@ index.iMapChange = function() {
 index.internationalMap = function() {
   localStorage.setItem('currentMap', '#imap');
   var baseUrl = window.location.href.substring(0,window.location.href.indexOf('/',9));
-  if (window.location.href !== 'http://localhost:9000/intl') {
+  if (window.location.href !== 'http://gunviolence.herokuapp.com/intl') {
     window.location.href = baseUrl + '/intl';
     index.iMap = new IntlMap();
   }
   $('#topLayerText').hide();
   $('#united_states_map').hide();
   $('#united_states_map_filters').hide();
-  $('#imap').show();
   $('.intlMapToggle').show();
   $('.overlay').hide();
   index.chooseActiveMap();
@@ -170,9 +169,9 @@ $(function() {
   $('#stateNamesInput').on('keyup', function(event) {
     if(event.which == 13) {
       getSenator();
-    };
+    }
   });
-  $('#findSenatorButton').on('click', function(event){
+  $('#findSenatorButton').on('click', function(){
     getSenator();
   });
   index.iMap = new IntlMap();
