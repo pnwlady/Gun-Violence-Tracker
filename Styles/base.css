@@ -18,8 +18,8 @@ input::-moz-focus-inner {
   height: 200px;
 }
 #imap {
-  width: 99%;
-  height: 99%;
+  width:99%;
+  height:99%;
   position: absolute;
   top: 0;
   left: 0;
@@ -27,8 +27,8 @@ input::-moz-focus-inner {
 }
 
 #imap2 {
-  width: 99%;
-  height: 99%;
+  width:99%;
+  height:99%;
   position: absolute;
   top: 0;
   left: 0;
@@ -46,8 +46,8 @@ input::-moz-focus-inner {
 }
 
 .overlay{
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 99%;
   position: absolute;
   top: 0;
   left: 0;

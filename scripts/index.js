@@ -27,13 +27,14 @@ index.unitedStatesMap = function() {
   if (window.location.href !== 'http://localhost:9000/us') {
     window.location.href = baseUrl + '/us';
   }
+  index.iMap = new IntlMap();
   $('#topLayerText').hide();
   $('#imap').hide();
   $('#imap2').hide();
   $('.intlMapToggle').hide();
   $('#united_states_map').show();
   $('#united_states_map_filters').show();
-  $('.overlay').fadeOut(1000);
+  $('.overlay').hide();
   index.chooseActiveMap();
   var parameters = [null,null,null];
   if (index.unitedStatesGoogleMap === undefined) {
@@ -46,13 +47,14 @@ index.unitedStatesMap = function() {
 };
 index.unitedStatesSpecificMap = function() {
   localStorage.setItem('currentMap', '#united_states_map');
+  index.iMap = new IntlMap();
   $('#topLayerText').hide();
   $('#imap').hide();
   $('#imap2').hide();
   $('.intlMapToggle').hide();
   $('#united_states_map').show();
   $('#united_states_map_filters').show();
-  $('.overlay').fadeOut(1000);
+  $('.overlay').hide();
   var lastSlash = window.location.href.lastIndexOf('/');
   var queryString = window.location.href.substring((lastSlash + 1),window.location.href.length);
   var locationString = '';
@@ -126,17 +128,17 @@ index.iMapChange = function() {
 };
 index.internationalMap = function() {
   localStorage.setItem('currentMap', '#imap');
-  index.iMap = new IntlMap();
   var baseUrl = window.location.href.substring(0,window.location.href.indexOf('/',9));
   if (window.location.href !== 'http://localhost:9000/intl') {
     window.location.href = baseUrl + '/intl';
+    index.iMap = new IntlMap();
   }
   $('#topLayerText').hide();
   $('#united_states_map').hide();
   $('#united_states_map_filters').hide();
   $('#imap').show();
   $('.intlMapToggle').show();
-  $('.overlay').fadeOut(1000);
+  $('.overlay').hide();
   index.chooseActiveMap();
   index.iMap.render();
 };
@@ -159,7 +161,6 @@ $(function() {
     event.preventDefault();
     $('#topLayerText').hide();
     $('.overlay').fadeOut(1000);
-    // $('#US').addClass('active');
   });
   $('#returnToMap').on('click', function(event){
     event.preventDefault();
@@ -174,6 +175,7 @@ $(function() {
   $('#findSenatorButton').on('click', function(event){
     getSenator();
   });
+  index.iMap = new IntlMap();
   $('#continue').on('click', index.removeText);
   $('div.overlay').on('click', index.removeText);
   $('#returnToMap').on('click', index.removeText);
