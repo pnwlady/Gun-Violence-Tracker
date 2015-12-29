@@ -8,7 +8,16 @@
   height:135px;
   text-align:center;
   z-index:-4500;
+  border-radius: 8px;
+  margin-left: 60px;
+  margin-bottom: 30px;
 }
+
+#united_states_map_location_help {
+  padding-top: 4px;
+  font-size: 11px;
+}
+
 #united_states_map_location_filter {
   margin:10px;
   position:relative;
@@ -26,3 +35,9 @@
   left:38px;
   width:175px;
 }
+
+  padding-top: 4px;
+  font-size: 11px;
+  border-radius: 8px;
+  margin-left: 60px;
+  margin-bottom: 30px;

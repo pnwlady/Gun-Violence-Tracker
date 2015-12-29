@@ -66,16 +66,31 @@ input::-moz-focus-inner {
 }
 
 .intlMapToggle {
-  width: 100px;
-  height: 50px;
-  z-index: -5250;
-  margin-left: 25px;
-  margin-top: 120px;
-  border: 2px solid #111;
-  background: #f5f5f5;
-  bottom:30px;
-  left:10px;
+  background-color:#fff;
+  opacity:0.75;
+  position: absolute;
+  bottom:80px;
+  left:60px;
+  width:230px;
+  height:140px;
   text-align:center;
+  z-index:-4500;
+  border-radius: 8px;
+}
+
+#toggleText {
+  margin-top: 14px;
+  margin-bottom: 8px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#filterNum, #filterRate {
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 10px;
+  margin: 2px;
+  font-size: 12px;
 }
 
 .navbar-brand{
@@ -111,12 +126,19 @@ input::-moz-focus-inner {
   padding: 6px;
   font-family: sans-serif;
   font-size: 16px;
-
 }
 
-#dataFrom{
+#dataFrom {
   text-align: center;
+  text-color: black;
+  font-weight: bold;
 }
+
+#dataFrom a {
+  color: black;
+  font-weight: initial;
+}
+
 #returnToMap{
   float: right;
   padding: 5px;

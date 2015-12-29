@@ -81,6 +81,11 @@ $(function() {
     $('.container.takeActionModal').hide();
     $('.overlay').fadeOut(1000);
   });
+  $('#stateNamesInput').on('keyup', function(event) {
+    if(event.which == 13) {
+      getSenator();
+    };
+  });
   $('#findSenatorButton').on('click', function(event){
     getSenator();
   });
