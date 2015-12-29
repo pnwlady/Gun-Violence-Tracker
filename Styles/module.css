@@ -1,23 +1,48 @@
+/*Intro Modal*/
+#continue{
+  float: right;
+  padding: 5px;
+}
+
+/*Take Action Modal*/
+#stateForm{
+  padding: 6px;
+  padding-bottom: 10px;
+}
+#statesTypeahead{
+  margin-bottom: 8px;
+}
+#senatorAnswer{
+  margin: 4px;
+  padding: 6px;
+}
+#returnToMap{
+  float: right;
+  padding: 5px;
+}
+
+/*US map*/
+#united_states_map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5000;
+}
 #united_states_map_filters {
-  background-color:#fff;
-  opacity:0.75;
   position:absolute;
   bottom:30px;
   left:10px;
   width:250px;
   height:135px;
-  text-align:center;
   z-index:-4500;
-  border-radius: 8px;
   margin-left: 60px;
   margin-bottom: 30px;
 }
-
 #united_states_map_location_help {
   padding-top: 4px;
-  font-size: 11px;
 }
-
 #united_states_map_location_filter {
   margin:10px;
   position:relative;
@@ -26,8 +51,9 @@
 #united_states_map_location_filter input{
   padding:5px;
 }
-#united_states_map_location_help {
-  font-size:10px;
+#street-view-panorama {
+  width: 250px;
+  height: 200px;
 }
 #date_range_slider {
   position:relative;
@@ -36,8 +62,32 @@
   width:175px;
 }
 
-  padding-top: 4px;
-  font-size: 11px;
-  border-radius: 8px;
-  margin-left: 60px;
-  margin-bottom: 30px;
+/*International Map*/
+#imap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5500;
+}
+#imap2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5500;
+}
+#toggleText{
+  margin-top: 14px;
+  margin-bottom: 8px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+#filterNum, #filterRate{
+  padding-right: 6px;
+  padding-left: 6px;
+  padding-top: 10px;
+  margin: 2px;
+}
