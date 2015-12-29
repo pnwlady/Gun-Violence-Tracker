@@ -1,21 +1,46 @@
 /* The Google Map Object */
-var GoogleMap = function(elementID,dataUrl) {
-  this.model(elementID,dataUrl);
-  this.view();
+var GoogleMap = function(elementID,dataUrl,parameters) {
+  this.model(elementID,dataUrl,parameters);
+  this.view(parameters);
   this.controller();
 };
-GoogleMap.prototype.model = function(elementID,dataUrl) {
+GoogleMap.prototype.model = function(elementID,dataUrl,parameters) {
+  var address = parameters[0];
+  var latitude = 37.09024;
+  var longitude = -95.712891;
+  var zoom = 4;
+  if (address !== null) {
+    var urlAddress = address.replace(/ /g,'+');
+    $.ajax({async: false, url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+urlAddress+'&key='+googleAPIKey}).done(function(data) {
+      if (data.status !== 'ZERO_RESULTS') {
+        latitude = data.results[0].geometry.location.lat;
+        longitude = data.results[0].geometry.location.lng;
+        if (data.results[0].address_components[0].types[0] === 'street_number') {
+          zoom = 17;
+        } else if (data.results[0].address_components[0].types[0] === 'neighborhood') {
+          zoom = 15;
+        } else if (data.results[0].address_components[0].types[0] === 'locality') {
+          zoom = 11;
+        } else if (data.results[0].address_components[0].types[0] === 'administrative_area_level_2') {
+          zoom = 9;
+        } else if (data.results[0].address_components[0].types[0] === 'administrative_area_level_1') {
+          zoom = 7;
+        } else if(data.results[0].address_components[0].types[0] === 'country') {
+          zoom = 4;
+        }
+      }
+    });
+  }
   this.markers = [];
   this.loadMarkers = false;
   this.modelSet = false;
   this.viewSet = false;
   this.currentMarkerWindow = false;
-  var coordinate = {lat:37.09024,lng:-95.712891}; //Coordinate for the USA
+  var coordinate = {lat:latitude,lng:longitude}; //Coordinate for the USA
   var mapOptions = {
     center: coordinate,
-    zoom: 4,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    minZoom: 4
+    zoom: zoom,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   this.map = new google.maps.Map(document.getElementById(elementID),mapOptions);
   this.dataURL = dataUrl;
@@ -38,11 +63,11 @@ GoogleMap.prototype.model = function(elementID,dataUrl) {
     }
   },10);
 };
-GoogleMap.prototype.view = function() {
+GoogleMap.prototype.view = function(parameters) {
   var googleMap = this;
   var loadView = setInterval(function() {
     if (googleMap.getModelSet()) {
-      google.maps.event.addDomListener(window, 'load', googleMap.initMap(googleMap));
+      google.maps.event.addDomListener(window, 'load', googleMap.initMap(googleMap,parameters));
       googleMap.setViewSet(true);
       clearInterval(loadView);
     }
@@ -167,7 +192,7 @@ GoogleMap.prototype.showMapMarker = function(index) {
 GoogleMap.prototype.getMapMarkerVisibility = function(index) {
   return this.markers[index].getVisible();
 };
-GoogleMap.prototype.initMap = function(map) {
+GoogleMap.prototype.initMap = function(map,parameters) {
   var googleMap = map;
   var loadMapMarkers = setInterval(function() {
     if (googleMap.getLoadMarkers()) {
@@ -181,16 +206,18 @@ GoogleMap.prototype.initMap = function(map) {
           googleMap.addMarker(googleMap,coordinate,markerJSON['Incident Date'],markerDate,markerJSON['Killed'],markerJSON['Injured'],markerJSON['hasStreetView']);
         }
         if ((i + 1) >= markersJSON.length) {
-          googleMap.setupDateFilter();
+          googleMap.createDateFilter(parameters[1],parameters[2]);
           clearInterval(loadMapMarkers);
         }
       }
     }
   },10);
 };
-GoogleMap.prototype.setupDateFilter = function() {
+GoogleMap.prototype.createDateFilter = function(min,max) {
   var oldestMarkerDate = '';
   var newestMarkerDate = '';
+  var minMarkerDate = '';
+  var maxMarkerDate = '';
   var mapMarkers = this.getMapMarkers();
   for (i = 0; i < mapMarkers.length; i++) {
     if (oldestMarkerDate === '') {
@@ -242,10 +269,160 @@ GoogleMap.prototype.setupDateFilter = function() {
   newestMarkerDate = newestMarkerDate.split('-');
   oldestMarkerDate = new Date(oldestMarkerDate[0],oldestMarkerDate[1],oldestMarkerDate[2]);
   newestMarkerDate = new Date(newestMarkerDate[0],newestMarkerDate[1],newestMarkerDate[2]);
+  minMarkerDate = oldestMarkerDate;
+  maxMarkerDate = newestMarkerDate;
+  if (min !== null) {
+    var minDate = min;
+    var minMarkerYear = minDate.substring(0,4);
+    var minMarkerMonth = minDate.substring(5,7);
+    var minMarkerDay = minDate.substring(8,minDate.length);
+    minMarkerDate = new Date(parseInt(minMarkerYear),(parseInt(minMarkerMonth)-1),parseInt(minMarkerDay));
+  }
+  if (max !== null) {
+    var maxDate = max;
+    var maxMarkerYear = maxDate.substring(0,4);
+    var maxMarkerMonth = maxDate.substring(5,7);
+    var maxMarkerDay = maxDate.substring(8,maxDate.length);
+    maxMarkerDate = new Date(parseInt(maxMarkerYear),(parseInt(maxMarkerMonth)-1),parseInt(maxMarkerDay));
+  }
   $('#date_range_slider').dateRangeSlider({
-    defaultValues: {min:oldestMarkerDate,max:newestMarkerDate},
+    defaultValues: {min:minMarkerDate,max:maxMarkerDate},
     bounds: {min:oldestMarkerDate,max:newestMarkerDate}
   });
+  var mapMarkers = this.getMapMarkers();
+  var minDate = minMarkerDate;
+  var maxDate = maxMarkerDate;
+  var oldestMarkerYear = minDate.getFullYear();
+  var oldestMarkerMonth = minDate.getMonth();
+  var oldestMarkerDay = minDate.getDate();
+  var newestMarkerYear = maxDate.getFullYear();
+  var newestMarkerMonth = maxDate.getMonth();
+  var newestMarkerDay = maxDate.getDate();
+  for (i = 0; i < mapMarkers.length; i++) {
+    var show = false;
+    var markerYear = mapMarkers[i].date.substring(0,4);
+    var markerMonth = mapMarkers[i].date.substring(5,7);
+    var markerDay = mapMarkers[i].date.substring(7,mapMarkers[i].date.length);
+    var isInRangeOfOldestDate = false;
+    var isInRangeOfNewestDate = false;
+    if (parseInt(markerYear) >= parseInt(oldestMarkerYear)) {
+      if (parseInt(markerYear) === parseInt(oldestMarkerYear)) {
+        if (parseInt(markerMonth) >= parseInt(oldestMarkerMonth)) {
+          if (parseInt(markerMonth) === parseInt(oldestMarkerMonth)) {
+            if (parseInt(markerDay) >= parseInt(oldestMarkerDay)) {
+              isInRangeOfOldestDate = true;
+            }
+          } else {
+            isInRangeOfOldestDate = true;
+          }
+        }
+      } else {
+        isInRangeOfOldestDate = true;
+      }
+    }
+    if (parseInt(markerYear) <= parseInt(newestMarkerYear)) {
+      if (parseInt(markerYear) === parseInt(newestMarkerYear)) {
+        if (parseInt(markerMonth) <= parseInt(newestMarkerMonth)) {
+          if (parseInt(markerMonth) === parseInt(newestMarkerMonth)) {
+            if (parseInt(markerDay) <= parseInt(newestMarkerDay)) {
+              isInRangeOfNewestDate = true;
+            }
+          } else {
+            isInRangeOfNewestDate = true;
+          }
+        }
+      } else {
+        isInRangeOfNewestDate = true;
+      }
+    }
+    if (isInRangeOfOldestDate && isInRangeOfNewestDate) {
+      show = true;
+    }
+    if (!show) {
+      if (this.getMapMarkerVisibility(i)) {
+        this.hideMapMarker(i);
+      }
+    } else {
+      if (!this.getMapMarkerVisibility(i)) {
+        this.showMapMarker(i);
+      }
+    }
+  }
+};
+GoogleMap.prototype.setupDateFilter = function(min,max) {
+  var oldestMarkerDate = '';
+  var newestMarkerDate = '';
+  var minMarkerDate = '';
+  var maxMarkerDate = '';
+  var mapMarkers = this.getMapMarkers();
+  for (i = 0; i < mapMarkers.length; i++) {
+    if (oldestMarkerDate === '') {
+      oldestMarkerDate = mapMarkers[i].date.toString();
+    }
+    if (newestMarkerDate === '') {
+      newestMarkerDate = mapMarkers[i].date.toString();
+    }
+    var markerYear = mapMarkers[i].date.substring(0,4);
+    var markerMonth = mapMarkers[i].date.substring(5,7);
+    var markerDay = mapMarkers[i].date.substring(8,mapMarkers[i].date.length);
+    var oldestMarkerYear = oldestMarkerDate.substring(0,4);
+    var oldestMarkerMonth = oldestMarkerDate.substring(5,7);
+    var oldestMarkerDay = oldestMarkerDate.substring(8,oldestMarkerDate.length);
+    var newestMarkerYear = newestMarkerDate.substring(0,4);
+    var newestMarkerMonth = newestMarkerDate.substring(5,7);
+    var newestMarkerDay = newestMarkerDate.substring(8,newestMarkerDate.length);
+    var oldestDate = false;
+    var oldestYear = false;
+    var oldestMonth = false;
+    var oldestDay = false;
+    var newestDate = false;
+    var newestYear = false;
+    var newestMonth = false;
+    var newestDay = false;
+    if (markerYear <= oldestMarkerYear) {
+      oldestYear = true;
+    } else if (markerYear >= newestMarkerYear) {
+      newestYear = true;
+    }
+    if (markerMonth <= oldestMarkerMonth) {
+      oldestMonth = true;
+    } else if (markerMonth >= newestMarkerMonth) {
+      newestMonth = true;
+    }
+    if (markerDay <= oldestMarkerDay) {
+      oldestDay = true;
+    } else if (markerDay >= newestMarkerDay) {
+      newestDay = true;
+    }
+    if (oldestYear && oldestMonth && oldestDay) {
+      oldestMarkerDate = mapMarkers[i].date.toString();
+    }
+    if (newestYear && newestMonth && newestDay) {
+      newestMarkerDate = mapMarkers[i].date.toString();
+    }
+  }
+  oldestMarkerDate = oldestMarkerDate.split('-');
+  newestMarkerDate = newestMarkerDate.split('-');
+  oldestMarkerDate = new Date(oldestMarkerDate[0],oldestMarkerDate[1],oldestMarkerDate[2]);
+  newestMarkerDate = new Date(newestMarkerDate[0],newestMarkerDate[1],newestMarkerDate[2]);
+  minMarkerDate = oldestMarkerDate;
+  maxMarkerDate = newestMarkerDate;
+  if (min !== null) {
+    var minDate = min;
+    var minMarkerYear = minDate.substring(0,4);
+    var minMarkerMonth = minDate.substring(5,7);
+    var minMarkerDay = minDate.substring(8,minDate.length);
+    minMarkerDate = new Date(parseInt(minMarkerYear),(parseInt(minMarkerMonth)-1),parseInt(minMarkerDay));
+  }
+  if (max !== null) {
+    var maxDate = max;
+    var maxMarkerYear = maxDate.substring(0,4);
+    var maxMarkerMonth = maxDate.substring(5,7);
+    var maxMarkerDay = maxDate.substring(8,maxDate.length);
+    maxMarkerDate = new Date(parseInt(maxMarkerYear),(parseInt(maxMarkerMonth)-1),parseInt(maxMarkerDay));
+  }
+  $('#date_range_slider').dateRangeSlider('values',minMarkerDate,maxMarkerDate);
+  $('#date_range_slider').dateRangeSlider('bounds',oldestMarkerDate,newestMarkerDate);
 };
 GoogleMap.prototype.setupFilterActions = function(map) {
   var googleMap = map;
@@ -259,6 +436,24 @@ GoogleMap.prototype.setupFilterActions = function(map) {
     var newestMarkerYear = maxDate.getFullYear();
     var newestMarkerMonth = maxDate.getMonth();
     var newestMarkerDay = maxDate.getDate();
+    var oldestMarkerMonthString = oldestMarkerMonth + 1;
+    var oldestMarkerDayString = oldestMarkerDay;
+    if (oldestMarkerMonthString < 10) {
+      oldestMarkerMonthString = ('0' + oldestMarkerMonthString).toString();
+    }
+    if (oldestMarkerDayString < 10) {
+      oldestMarkerDayString = ('0' + oldestMarkerDayString).toString();
+    }
+    var newestMarkerMonthString = newestMarkerMonth + 1;
+    var newestMarkerDayString = newestMarkerDay;
+    if (newestMarkerMonthString < 10) {
+      newestMarkerMonthString = ('0' + newestMarkerMonthString).toString();
+    }
+    if (newestMarkerDayString < 10) {
+      newestMarkerDayString = ('0' + newestMarkerDayString).toString();
+    }
+    var minDateString = (oldestMarkerYear + '-' + oldestMarkerMonthString + '-' + oldestMarkerDayString).toString();
+    var maxDateString = (newestMarkerYear + '-' + newestMarkerMonthString + '-' + newestMarkerDayString).toString();
     for (i = 0; i < mapMarkers.length; i++) {
       var show = false;
       var markerYear = mapMarkers[i].date.substring(0,4);
@@ -309,6 +504,94 @@ GoogleMap.prototype.setupFilterActions = function(map) {
         }
       }
     }
+    var url = window.location.href;
+    var lastSlash = window.location.href.lastIndexOf('/');
+    var queryString = '';
+    if (lastSlash <= 8) {
+      var baseUrl = window.location.href;
+      var dateRangeString = (minDateString + '+' + maxDateString).toString();
+      dateRangeString = dateRangeString.replace(/[a-z]/gi,'');
+      dateRangeString = ('Date-Range=' + dateRangeString);
+      window.location.href = baseUrl + '/us/' + dateRangeString;
+    } else if (window.location.href.substring((lastSlash + 1),(lastSlash+3)) === 'us') {
+      var baseUrl = window.location.href.substring(0,lastSlash+3);
+      queryString = window.location.href.substring((lastSlash + 1),window.location.href.length);
+      var locationString = '';
+      var dateRangeString = '';
+      queryString = queryString.split('&');
+      if (queryString[0].indexOf('Location=') > -1) {
+        locationString = queryString[0].substring(9,queryString[0].length);
+      } else if (queryString[0].indexOf('Date-Range=') > -1) {
+        dateRangeString = queryString[0].substring(11,queryString[0].length);
+      }
+      if (queryString.length > 1) {
+        if (queryString[1].indexOf('Location=') > -1) {
+          locationString = queryString[1].substring(9,queryString[1].length);
+        } else if (queryString[1].indexOf('Date-Range=') > -1) {
+          dateRangeString = queryString[1].substring(11,queryString[1].length);
+        }
+      }
+      if (locationString === '') {
+        locationString = null;
+      } else {
+        locationString = locationString.replace(/[^a-z0-9+-]+/gi,'');
+      }
+      if (dateRangeString === '') {
+        dateRangeString = null;
+      } else {
+        dateRangeString = dateRangeString.replace(/[a-z]/gi,'');
+      }
+      dateRangeString = (minDateString + '+' + maxDateString).toString();
+      dateRangeString = dateRangeString.replace(/[a-z]/gi,'');
+      dateRangeString = ('Date-Range=' + dateRangeString);
+      if (locationString !== null) {
+        locationString = ('Location=' + locationString);
+      }
+      if (locationString !== null) {
+        window.location.href = baseUrl + '/' + locationString + '&' + dateRangeString;
+      } else {
+        window.location.href = baseUrl + '/' + dateRangeString;
+      }
+    } else {
+      var baseUrl = window.location.href.substring(0,lastSlash);
+      queryString = window.location.href.substring((lastSlash + 1),window.location.href.length);
+      var locationString = '';
+      var dateRangeString = '';
+      queryString = queryString.split('&');
+      if (queryString[0].indexOf('Location=') > -1) {
+        locationString = queryString[0].substring(9,queryString[0].length);
+      } else if (queryString[0].indexOf('Date-Range=') > -1) {
+        dateRangeString = queryString[0].substring(11,queryString[0].length);
+      }
+      if (queryString.length > 1) {
+        if (queryString[1].indexOf('Location=') > -1) {
+          locationString = queryString[1].substring(9,queryString[1].length);
+        } else if (queryString[1].indexOf('Date-Range=') > -1) {
+          dateRangeString = queryString[1].substring(11,queryString[1].length);
+        }
+      }
+      if (locationString === '') {
+        locationString = null;
+      } else {
+        locationString = locationString.replace(/[^a-z0-9+-]+/gi,'');
+      }
+      if (dateRangeString === '') {
+        dateRangeString = null;
+      } else {
+        dateRangeString = dateRangeString.replace(/[a-z]/gi,'');
+      }
+      dateRangeString = (minDateString + '+' + maxDateString).toString();
+      dateRangeString = dateRangeString.replace(/[a-z]/gi,'');
+      dateRangeString = ('Date-Range=' + dateRangeString);
+      if (locationString !== null) {
+        locationString = ('Location=' + locationString);
+      }
+      if (locationString !== null) {
+        window.location.href = baseUrl + '/' + locationString + '&' + dateRangeString;
+      } else {
+        window.location.href = baseUrl + '/' + dateRangeString;
+      }
+    }
   });
   $('#united_states_map_location_input').keyup(function(event){
     if(event.keyCode == 13) {
@@ -335,9 +618,129 @@ GoogleMap.prototype.setupFilterActions = function(map) {
               zoom = 4;
             }
             googleMap.map.setZoom(zoom);
+            var url = window.location.href;
+            var lastSlash = window.location.href.lastIndexOf('/');
+            var queryString = '';
+            if (lastSlash <= 8) {
+              alert('0');
+              locationString = urlAddress.replace(/[^a-z0-9+-]+/gi,'');
+              locationString = ('Location=' + locationString);
+              window.location.href = baseUrl + locationString;
+            } else if (window.location.href.substring((lastSlash + 1),(lastSlash+3)) === 'us') {
+              alert('1');
+              var baseUrl = window.location.href.substring(0,lastSlash+3);
+              queryString = window.location.href.substring((lastSlash + 1),window.location.href.length);
+              var locationString = '';
+              var dateRangeString = '';
+              queryString = queryString.split('&');
+              if (queryString[0].indexOf('Location=') > -1) {
+                locationString = queryString[0].substring(9,queryString[0].length);
+              } else if (queryString[0].indexOf('Date-Range=') > -1) {
+                dateRangeString = queryString[0].substring(11,queryString[0].length);
+              }
+              if (queryString.length > 1) {
+                if (queryString[1].indexOf('Location=') > -1) {
+                  locationString = queryString[1].substring(9,queryString[1].length);
+                } else if (queryString[1].indexOf('Date-Range=') > -1) {
+                  dateRangeString = queryString[1].substring(11,queryString[1].length);
+                }
+              }
+              if (locationString === '') {
+                locationString = null;
+              } else {
+                locationString = locationString.replace(/[^a-z0-9+-]+/gi,'');
+              }
+              if (dateRangeString === '') {
+                dateRangeString = null;
+              } else {
+                dateRangeString = dateRangeString.replace(/[a-z]/gi,'');
+              }
+              locationString = urlAddress.replace(/[^a-z0-9+-]+/gi,'');
+              locationString = ('Location=' + locationString);
+              if (dateRangeString !== null) {
+                dateRangeString = ('Date-Range=' + dateRangeString);
+              }
+              if (dateRangeString !== null) {
+                window.location.href = baseUrl + '/' + locationString + '&' + dateRangeString;
+              } else {
+                window.location.href = baseUrl + '/' + locationString;
+              }
+            } else {
+              alert('2');
+              var baseUrl = window.location.href.substring(0,lastSlash - 3);
+              queryString = window.location.href.substring((lastSlash + 1),window.location.href.length);
+              var locationString = '';
+              var dateRangeString = '';
+              queryString = queryString.split('&');
+              if (queryString[0].indexOf('Location=') > -1) {
+                locationString = queryString[0].substring(9,queryString[0].length);
+              } else if (queryString[0].indexOf('Date-Range=') > -1) {
+                dateRangeString = queryString[0].substring(11,queryString[0].length);
+              }
+              if (queryString.length > 1) {
+                if (queryString[1].indexOf('Location=') > -1) {
+                  locationString = queryString[1].substring(9,queryString[1].length);
+                } else if (queryString[1].indexOf('Date-Range=') > -1) {
+                  dateRangeString = queryString[1].substring(11,queryString[1].length);
+                }
+              }
+              if (locationString === '') {
+                locationString = null;
+              } else {
+                locationString = locationString.replace(/[^a-z0-9+-]+/gi,'');
+              }
+              if (dateRangeString === '') {
+                dateRangeString = null;
+              } else {
+                dateRangeString = dateRangeString.replace(/[a-z]/gi,'');
+              }
+              locationString = urlAddress.replace(/[^a-z0-9+-]+/gi,'');
+              alert('Location: '+locationString);
+              locationString = ('Location=' + locationString);
+              if (dateRangeString !== null) {
+                dateRangeString = ('Date-Range=' + dateRangeString);
+              }
+              if (dateRangeString !== null) {
+                window.location.href = baseUrl + '/us/' + locationString + '&' + dateRangeString;
+              } else {
+                window.location.href = baseUrl + '/us/' + locationString;
+              }
+            }
           }
         });
       }
     }
   });
+};
+GoogleMap.prototype.refresh = function() {
+  google.maps.event.trigger(this.map, 'resize');
+  this.map.setZoom(4);
+  this.map.setCenter(new google.maps.LatLng(37.09024,-95.712891));
+};
+GoogleMap.prototype.centerMapOnAddress = function(address) {
+  if (address !== '') {
+    var urlAddress = address.replace(/ /g,'+');
+    $.ajax({async: false, url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+urlAddress+'&key='+googleAPIKey}).done(function(data) {
+      if (data.status !== 'ZERO_RESULTS') {
+        var latitude = data.results[0].geometry.location.lat;
+        var longitude = data.results[0].geometry.location.lng;
+        this.map.setCenter(new google.maps.LatLng(latitude,longitude));
+        var zoom = 0;
+        if (data.results[0].address_components[0].types[0] === 'street_number') {
+          zoom = 17;
+        } else if (data.results[0].address_components[0].types[0] === 'neighborhood') {
+          zoom = 15;
+        } else if (data.results[0].address_components[0].types[0] === 'locality') {
+          zoom = 11;
+        } else if (data.results[0].address_components[0].types[0] === 'administrative_area_level_2') {
+          zoom = 9;
+        } else if (data.results[0].address_components[0].types[0] === 'administrative_area_level_1') {
+          zoom = 7;
+        } else if(data.results[0].address_components[0].types[0] === 'country') {
+          zoom = 4;
+        }
+        this.map.setZoom(zoom);
+      }
+    });
+  }
 };
