@@ -7,7 +7,6 @@
 /*Take Action Modal*/
 #stateForm{
   padding: 6px;
-  padding-bottom: 10px;
 }
 #statesTypeahead{
   margin-bottom: 8px;
@@ -20,6 +19,10 @@
   float: right;
   padding: 5px;
 }
+
+#intro-text {
+  font-size: 12px;
+};
 
 /*US map*/
 #united_states_map {
