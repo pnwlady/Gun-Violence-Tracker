@@ -24,7 +24,7 @@ index.modal = function() {
 index.unitedStatesMap = function() {
   localStorage.setItem('currentMap', '#united_states_map');
   var baseUrl = window.location.href.substring(0,window.location.href.indexOf('/',9));
-  if (window.location.href !== 'http://gunviolence.herokuapp.com/us') {
+  if (window.location.href !== (baseUrl + '/us')) {
     window.location.href = baseUrl + '/us';
   }
   index.iMap = new IntlMap();
@@ -129,7 +129,7 @@ index.iMapChange = function() {
 index.internationalMap = function() {
   localStorage.setItem('currentMap', '#imap');
   var baseUrl = window.location.href.substring(0,window.location.href.indexOf('/',9));
-  if (window.location.href !== 'http://gunviolence.herokuapp.com/intl') {
+  if (window.location.href !== (baseUrl + '/intl')) {
     window.location.href = baseUrl + '/intl';
     index.iMap = new IntlMap();
   }
