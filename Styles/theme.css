@@ -1,0 +1,75 @@
+/*Grey overlay*/
+.overlay{
+  background-color: #0E0C15;
+  opacity: .8;
+}
+
+/*Nav Bar*/
+.navbar-brand{
+  font-size: 28px;
+}
+.navbar-header{
+  opacity: .8;
+}
+.uniformLinks{
+  font-size: 18px;
+}
+
+/*Modals*/
+.panel {
+	background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+.margin-base-vertical {
+  text-align: center;
+}
+
+/*International Map*/
+.intlMapToggle {
+  border-radius: 8px;
+  background-color:#fff;
+  opacity:0.75;
+  text-align:center;
+}
+
+/*Take Action Modal*/
+#stateForm{
+  text-align: center;
+}
+#statesTypeahead{
+  border-radius: 3px;
+  border-style: solid;
+  border-color: white;
+}
+#senatorAnswer{
+  font-family: sans-serif;
+  font-size: 16px;
+}
+#dataFrom{
+  text-align: center;
+  text-color: black;
+  font-weight: bold;
+}
+#dataFrom a {
+  color: black;
+  font-weight: initial;
+}
+
+/*US map*/
+#united_states_map_filters {
+  background-color:#fff;
+  opacity:0.75;
+  text-align:center;
+  border-radius: 8px;
+}
+#united_states_map_location_help {
+  font-size: 11px;
+}
+#united_states_map_location_help {
+  font-size:10px;
+}
+
+/*International Map*/
+#filterNum, #filterRate{
+  font-size: 12px;
+}

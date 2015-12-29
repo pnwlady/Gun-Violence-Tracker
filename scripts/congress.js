@@ -3,7 +3,6 @@ cleanData.contactInfo = [];
 cleanData.state = [];
 
 var filter = function (stateAbbrv) {
-  //to string or not to string?
   var abbreviation = stateAbbrv;
   var searchRegex = new RegExp(abbreviation);
   cleanData.contactInfo.forEach(function(cV, index, cdArray) {
@@ -17,7 +16,6 @@ var filter = function (stateAbbrv) {
 var replaceState = function() {
   cleanData.state.forEach(function(currentValue, index, cdsArray) {
     var stateName = cdsArray[index].abbreviation;
-    // console.log("this is statename " + stateName);
     filter(stateName);
   });
 };
@@ -26,10 +24,10 @@ var getState = function () {
   $.getJSON('data/states.json', function (data) {
     cleanData.state = data;
     replaceState();
-    console.log(cleanData.state);
-    console.log(cleanData.contactInfo);
-    fillStateAbrreviations();
-    fillContactInfo();
+    fillDataBase();
+    $('input.typeahead').typeahead({
+      source: cleanData.state
+    });
   });
 };
 
@@ -37,67 +35,47 @@ $.getJSON('data/congress.json', function (data) {
   cleanData.contactInfo = data;
 }).done(getState);
 
-function fillStateAbrreviations () {
-  cleanData.state.forEach(function(object) {
-    webDB.execute([{
-      'sql': 'INSERT INTO stateAbbreviations (name, abbreviation) VALUES (?, ?);',
-      'data': [object.name, object.abbreviation],
-    }]);
+function fillStateAbrreviations (results) {
+  if(results.length <= 0){
+    cleanData.state.forEach(function(object) {
+      webDB.execute([{
+        'sql': 'INSERT INTO stateAbbreviations (name, abbreviation) VALUES (?, ?);',
+        'data': [object.name, object.abbreviation],
+      }]);
+    });
+  };
+};
+
+var fillContactInfo = function (results) {
+  if(results.length <= 0){
+    cleanData.contactInfo.forEach(function(object) {
+      webDB.execute([{
+        'sql': 'INSERT INTO congressContact (sortname, firstname, lastname, link) VALUES (?, ?, ?, ?);',
+        'data': [object.sortname, object.firstname, object.lastname, object.link]
+      }]);
+    });
+  };
+};
+
+var fillDataBase = function () {
+  webDB.execute('SELECT * FROM congressContact;', function(results) {
+    fillContactInfo(results);
+  });
+  webDB.execute('SELECT * FROM stateAbbreviations;', function(results) {
+    fillStateAbrreviations(results);
   });
 };
 
-function fillContactInfo () {
-  cleanData.contactInfo.forEach(function(object) {
-    webDB.execute([{
-      'sql': 'INSERT INTO congressContact (sortname, firstname, lastname, link) VALUES (?, ?, ?, ?);',
-      'data': [object.sortname, object.firstname, object.lastname, object.link],
-    }]);
-  });
+var getSenator = function () {
+  var state = $('#statesTypeahead').val();
+  webDB.execute(
+    'SELECT sortname, firstname, lastname, link FROM congressContact INNER JOIN stateAbbreviations ON abbreviation = sortname WHERE name = "' + state + '";',
+    function(rows) {
+      // on success
+      var senatorArray = rows;
+      $('.senators').empty();
+      senatorArray.forEach(function (cE, index, array){
+        $('.senators').append("<p><a class='senatorContact' href='" + array[index].link + "' target='_blank'>" + array[index].firstname +" " + array[index].lastname + "</a></p>");
+      });
+    });
 };
-
-
-
-
-
-// $.getJSON("data/congress.json", function(data, message, xhr) {
-//   var items = [];
-// })
-//   .each(data, function (key, value) {
-//     items.push("<option id='" + key + "'>" + value + "</option>")
-//   })
-//
-//
-//
-//   .done(function() {
-//     congress.data.object.forEach(function(congressPerson) {
-//       //retrieve sortname state abbrv. from filter
-//       if (congressPerson.sortname.search(/HI/) = 0) {
-//         console.log(congressPerson.sortname);
-//       };
-//     });
-//   });
-//
-//
-//
-// //import state names and abbreviation from json
-// congress.importStates = function() {
-//   var rawDataCache = localStorage.getItem('raw-data');
-//   rawDataCache.append
-// }
-//
-// congress.stateFilterOptions = function () {
-//   for (var = i; congress.data.length; i++) {
-//     var currentState = states.data[i].name;
-//     var $popState = ('#filterByState').clone();
-//     $popState.removeAttr('id').text(currentState);
-//     ('#state').append($popState)
-//   }
-// }
-//
-// congress.stateFilterSelect = function () {
-//   //dropdown filtering trigger here
-//   $('select[id="states"]').change(function() {
-//     $('#states').find('option:first').attr('selected', 'selected');
-//   })
-// }
-//

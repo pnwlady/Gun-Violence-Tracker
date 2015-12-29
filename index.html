@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta http-equiv='X-UA-Compatible' content='IE=9' />
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Gun Violence Tracker</title>
     <link rel='stylesheet' href='/Styles/lib/normalize-3.0.2.css' type='text/css'/>
@@ -18,17 +17,16 @@
     <script src='https://code.jquery.com/jquery-1.11.3.min.js'></script>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-    <script src="vendor/scripts/jQueryRangeSlider/jquery.mousewheel.min.js"></script>
-    <script src="vendor/scripts/jQueryRangeSlider/jQAllRangeSliders-min.js"></script>
+    <script src="/vendor/scripts/jQueryRangeSlider/jquery.mousewheel.min.js"></script>
+    <script src="/vendor/scripts/jQueryRangeSlider/jQAllRangeSliders-min.js"></script>
     <script src='https://maps.googleapis.com/maps/api/js'></script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
       google.load('visualization', '1.0', {'packages':['geochart']});
     </script>
     <script src='https://cdn.rawgit.com/visionmedia/page.js/master/page.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js' charset='utf-8'></script>
   </head>
-
   <header>
     <nav class='navbar navbar-inverse navbar-fixed-top'>
       <div class='container-fluid'>
@@ -41,7 +39,6 @@
           </button>
           <a class='navbar-brand' href='javascript:void(0);' onClick='index.modal()'>Gun Violence Tracker</a>
         </div>
-
         <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
           <ul class='nav navbar-nav'>
             <li class='uniformLinks' id='US'><a href='/us'>United States <span class='sr-only'>(current)</span></a></li>
@@ -52,36 +49,38 @@
       </div><!-- /.container-fluid -->
     </nav>
   </header>
-
   <body>
-
     <div class='overlay'></div>
-
-
-
     <div id='topLayerText'>
     <div class="container textOver">
   		<div class="row">
   			<div class="col-md-6 col-md-offset-3 panel panel-default">
 		      <h1 class="margin-base-vertical">Gun Violence Tracker</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-                Praesent libero. Sed cursus ante dapibus diam.
-            </p>
-            <p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.
-                Maecenas mattis. Sed convallis tristique sem.
-            </p>
-    				<a id='continue' href='javascript:void(0);'>Continue to Maps</a>
+            <p>Gun violence incidents are a contemporary concern the United States.  However, the data is often poorly represented.  Often websites will represent these incidents with the "raw" data, a display of the information in a vast table.  Our team set out to create a website that could encapsulates large amounts of data regarding incidents of gun violence and present it users in a meaningful, simple and perhaps poignent way.</p>
+            <p>Code Fellows 301 Team: Heidi Laursen, Maria Romero, Kenny Suh, and James Mason</p>
+    				<a id='continue' href='javascript:void(0);'>Continue to the Maps</a>
   			</div><!-- //main content -->
   		</div><!-- //row -->
   	</div> <!-- //container -->
-
     <div class="container takeActionModal" hidden>
   		<div class="row">
   			<div class="col-md-6 col-md-offset-3 panel panel-default">
 		      <h1 class="margin-base-vertical">Additional Resources</h1>
-            <p id='dataFrom'>Data on this site from:<br>
+            <p>
+              Large amounts of public data about incidents of gun violence are generally hard to come by.  So, unfortunately, the data we've presented here is not an accurate or precise representation of the state of gun violence in the United States or abroad, it is only a small fraction of incidents.  Our data used on the United States map is a subset of ~300 mass shooting incidents from the Gun Violence Archive.  We believe their information is frequently updated and is genereally a good source of information about gun violence incidents within the United States.  Our international data is from the Global Burden of Disease and is specifically comprised of occurances of death resulting from firearm incidents.
+            </p>
+              <div id="stateForm">
+                <h3>Contact your US Senators</h3>
+                <div id='stateNamesInput'>
+                  <input id='statesTypeahead' class='typeahead' type='text' data-provide='typeahead' autocomplete='false' placeholder='States'>
+                </div>
+                <a id='findSenatorButton' class='btn btn-sm btn-success' role="button">Search</a>
+                <div id="senatorAnswer" class='senators'></div>
+              </div>
+            <p id='dataFrom'>Bibliography:<br>
               <a href='http://www.theguardian.com/news/datablog/2013/sep/17/gun-crime-statistics-by-us-state'>The Guardian</a><br>
-              <a href='http://www.gunviolencearchive.org/reports'>GunViolenceArchive.org</a>
+              <a href='http://www.gunviolencearchive.org/reports'>GunViolenceArchive.org</a><br>
+              <a href='http://www.healthdata.org/gbd'>Global Burden of Disease</a>
             </p>
             <a id='returnToMap' href='javascript:void(0);'>Return to Map</a>
   			</div><!-- //main content -->
@@ -92,25 +91,24 @@
     <div id='united_states_map_filters'>
       <div id='date_range_slider'></div>
       <div id='united_states_map_location_filter'>
-        <input id="united_states_map_location_input" type="text" name="location" placeholder="Location Search">
-        <div id="united_states_map_location_help">Press "Enter" or "Return" to search.</div>
+        <input id='united_states_map_location_input' type='text' name='location' placeholder='Location Search'>
+        <div id='united_states_map_location_help'>Press 'Enter' or 'Return' to search.</div>
       </div>
     </div>
     <div id='imap'></div>
     <div id='imap2'></div>
     <div class='intlMapToggle'>
-      <p id="toggleText"></p>
-      <button class="btn btn-primary-outline" onClick='index.iMapChange()'>Toggle Filter</button>
+      <p id='toggleText'></p>
+      <button class='btn btn-primary-outline' onClick='index.iMapChange()'>Change filter</button>
+      <p id='filterRate'>Rate is number of firearm deaths per 100,000 people in 2013.</p>
+      <p id='filterNum'>Number is all firearm deaths for 2013.</p>
     </div>
-
     <script src='/vendor/styles/bootstrap/js/bootstrap.js'></script>
     <script src='/scripts/googleMap.js'></script>
     <script src='/scripts/intlMap.js'></script>
-    <script src="/vendor/html5sql.js"></script>
-    <script src="/vendor/webDB.js"></script>
-    <!-- <script src="/data/congress.json"></script>
-    <script src="/data/states.json"></script>
-    <script src="/data/cleancongress.json"></script> -->
+    <script src='/vendor/html5sql.js'></script>
+    <script src='/vendor/webDB.js'></script>
+    <script src='/vendor/styles/bootstrap/js/bootstrap3-typeahead.js'></script>
     <script src='/scripts/congress.js'></script>
     <script src='/scripts/index.js'></script>
     <script src='/scripts/router.js'></script>
