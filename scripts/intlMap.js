@@ -39,13 +39,17 @@ IntlMap.prototype.changeFilter = function() {
 };
 
 IntlMap.prototype.render = function() {
-  $('#toggleText').text('Filter by: ' + this.filters[this.currentFilter]);
+  $('#toggleText').text('Map filtered by: ' + this.filters[this.currentFilter]);
   if(this.currentFilter) {
     $('#imap').hide();
     $('#imap2').show();
+    $('#filterRate').hide();
+    $('#filterNum').show();
   } else {
     $('#imap').show();
     $('#imap2').hide();
+    $('#filterRate').show();
+    $('#filterNum').hide();
   }
 
 
