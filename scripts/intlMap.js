@@ -8,6 +8,7 @@ IntlMap = function() {
   };
   this.filters = ['rate per 100,000', 'number'];
   this.currentFilter = 0;
+  $('#toggleText').text('Map filtered by: ' + this.filters[this.currentFilter]);
   $.getJSON('data/intlData.json', function(data) {
     var arr = [['location_name', 'mean']];
     var arr2 = [['location_name', 'mean']];

@@ -40,7 +40,8 @@ GoogleMap.prototype.model = function(elementID,dataUrl,parameters) {
   var mapOptions = {
     center: coordinate,
     zoom: zoom,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    minZoom: 4
   };
   this.map = new google.maps.Map(document.getElementById(elementID),mapOptions);
   this.dataURL = dataUrl;
